@@ -28,12 +28,102 @@ session_start();
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
 
-    <link rel="stylesheet" href="assests/css/navbar.css">
-    <link rel="stylesheet" href="assests/css/index.css">
+    <!-- <link rel="stylesheet" href="assests/css/navbar.css"> -->
+    <!-- <link rel="stylesheet" href="assests/css/index.css"> -->
 
 
     <title>BINOD</title>
 </head>
+
+<style>
+    /******************* hero ******************/
+ .hero .backgroundVideo {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    background-attachment: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -5;
+  }
+  
+  .hero .video-overlay {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    background-attachment: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    background: rgba(0,0,0,.4);
+  }
+  
+  .hero h1, h2 {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .hero h1 {
+    font-size: 6rem;
+    margin-top: 30vh;
+  }
+  
+  .hero h2 { font-size: 3rem; }
+  
+  .hero h3 {
+      color: white;
+      text-align: center;
+      font-weight: lighter;
+      margin-top: 5rem;
+  }
+  
+  .hero h3 span{
+      border: 3px solid white;
+      border-radius: 10px;
+      font-size: 2rem;
+  }
+  
+  .hero h3 span a {
+      margin: 20px;
+      color: white;
+  }
+  
+  .hero h3 span:hover a {
+      color: black;
+  }
+  
+  .hero h3 span:hover {
+      background: white;
+  }
+  
+  @media (max-width:800px)
+  {
+      .hero h1{
+          font-size: 4rem;
+      }
+  }
+  
+  @media (max-width:500px)
+  {
+      .hero h1{
+          font-size: 2rem;
+      }
+      .hero h2{
+          font-size: 1.5rem;
+      }
+      .hero h3 span{
+          font-size: 1rem;
+      }
+  }
+
+</style>
 
 <body id="home">
     <header id="topheader">
@@ -45,7 +135,7 @@ session_start();
  <!--***************************************** hero section *****************************************************-->
     <section class="hero">
 
-       <video class="backgroundVideo" autoplay loop muted poster="https://assets.codepen.io/6093409/river.jpg">
+       <video class="backgroundVideo" autoplay loop muted poster="assests/images/home/home.png">
          <source src="assests/videos/home.mp4" type="video/mp4">
        </video>
 
@@ -56,9 +146,49 @@ session_start();
        <h3><span><a href="pricing.php">EXPLORE</a></span></h3>
     </section>
 
-    <section style="background:white;margin-top:80vh;">
+    <section style="background:white;margin-top:60vh;padding-top:50px;">
         <div class="m-5 p-5 mb-0">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, facilis provident numquam atque saepe vitae deleniti eius veritatis quasi odit, at amet, veniam ad quos illum temporibus. Laudantium ducimus quidem porro velit nulla voluptate. Ipsum voluptas, eum, ex tempora, obcaecati vitae nam consectetur tenetur molestias ratione perferendis earum quaerat voluptatum.
+        </div>
+    </section>
+
+    <section style="background:white;padding:100px 0;position:relative;">
+        <img src="assests/images/home/blog.png" alt="">
+        <div style="position: absolute;top:55%; left: 3rem;right:3rem;transform:translateY(-55%);">
+            <div class="row">
+            <div class="col-md-6">
+            <h1 class="mb-5 text-uppercase">Opportunities</h1>
+            <p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod incidunt minus repudiandae eius impedit numquam qui sapiente magnam vitae dolorem, laboriosam expedita provident deserunt ipsa? Porro dolorem amet quo illum?Lorem ipsum dolor sit amet...</p>
+            <button href="Singleblog.php?topic=opportunities" class="btn btn-dark">Read more</button>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background:white;padding:100px 0;position:relative;">
+        <img src="assests/images/home/blog2.png" alt="">
+        <div style="position: absolute;top:55%; left: 3rem;right:3rem;transform:translateY(-55%);">
+            <div class="row">
+                <div class="col-md-6"></div>
+            <div class="col-md-6" style="float:right;">
+            <h1 class="mb-5 text-uppercase">Opportunities</h1>
+            <p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod incidunt minus repudiandae eius impedit numquam qui sapiente magnam vitae dolorem, laboriosam expedita provident deserunt ipsa? Porro dolorem amet quo illum?Lorem ipsum dolor sit amet...</p>
+            <button href="Singleblog.php?topic=opportunities" class="btn btn-dark">Read more</button>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="background:white;padding:100px 0;position:relative;">
+        <img src="assests/images/home/blog.png" alt="">
+        <div style="position: absolute;top:55%; left: 3rem;right:3rem;transform:translateY(-55%);">
+            <div class="row">
+            <div class="col-md-6">
+            <h1 class="mb-5 text-uppercase">Opportunities</h1>
+            <p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod incidunt minus repudiandae eius impedit numquam qui sapiente magnam vitae dolorem, laboriosam expedita provident deserunt ipsa? Porro dolorem amet quo illum?Lorem ipsum dolor sit amet...</p>
+            <button href="Singleblog.php?topic=opportunities" class="btn btn-dark">Read more</button>
+            </div>
+            </div>
         </div>
     </section>
 
@@ -71,8 +201,8 @@ session_start();
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
 
-    <script src="assests/js/main.js"></script>    
-
+    <!-- <script src="assests/js/main.js"></script>   -->
+    
 </body>
 
 </html>

@@ -12,6 +12,116 @@ session_start();
 
 <!doctype html>
 <html lang="en">
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+main {
+    overflow-x: hidden;
+}
+a{
+    text-decoration: none;
+}
+
+
+header{
+    position: fixed;
+    top:0; left: 0; right:0;
+    z-index: 1000;
+}
+.navbar {
+    padding: 1% 5%;
+}
+
+.navbar .brand{
+    font-size: 2rem;
+}
+
+header ul li a{
+    font-size: 20px;
+}
+
+header .dropdown-menu li a {
+    color: black;
+    text-decoration: none;
+}
+
+header .dropdown-menu li:hover a {
+    color: black;
+    text-decoration: none;
+}
+
+header .contact {
+    background: white;
+    border-radius: 10px;
+}
+
+header .contact a {
+    color: black;
+    font-weight: bold;
+}
+
+header .contact:hover {
+    background:none;
+    border: 3px solid white;
+}
+
+header .contact:hover a{
+    color: white;
+}
+
+
+@media (max-width:1024px){
+    .navbar {
+        padding: 5%;
+    }
+    .navbar .brand {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width:500px){
+    .navbar .brand {
+        font-size: 1rem;
+    }
+}
+
+.footer .icon-box div {
+    background: black;
+    border-radius: 50%;
+}
+
+.footer .icon-box div i {
+    color: white;
+}
+
+.footer .icon-box div:hover {
+    background: white;
+}
+
+.footer .icon-box div:hover i {
+    color: black;
+}
+
+.footer .contact p i {
+    color: black;
+}
+
+.footer .contact p:hover i {
+    color: blue;
+}
+</style>
   
 
 <body>
@@ -43,9 +153,11 @@ session_start();
                                 $result = mysqli_query($conn, $sql);
                                 $row = mysqli_fetch_assoc($result);
                     
-                                    foreach ($result as $row) {
-                                    echo'
-                                <li><a class="dropdown-item text-dark" href="languages.php?language='.ucwords($row["cname"]).'">'.ucwords($row["cname"]).'</a></li>'; } ?>
+                                    foreach ($result as $row) : ?>
+                                    
+                                <li><a class="dropdown-item text-dark" id="myBtn" href="languages.php?language=<?=ucwords($row["cname"])?>"><?=ucwords($row["cname"])?></a></li>
+                    
+                                <?php endforeach; ?>
                             </ul>
                         </li>
                         <li class="nav-item">
@@ -59,6 +171,24 @@ session_start();
                 </div>
             </div>
         </nav>
+
+
+<script>
+let navvv = document.getElementById("navbar");
+
+window.onscroll = () => {
+    if (window.pageYOffset > 200) {
+
+        navvv.style.background = "#000000";
+        navvv.style.boxShadow = "0px 4px 8px rgba(0,0,0,.5)";
+    }
+    else {
+        navvv.style.background = "transparent";
+        navvv.style.boxShadow = "none";
+    }
+}
+</script>
+
 </body>
 
 </html>

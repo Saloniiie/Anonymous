@@ -43,7 +43,7 @@ session_start();
         width: 100%;
         height: 100vh;
         z-index: -1;
-        background: linear-gradient(to right, rgb(8, 8, 8), rgb(121, 104, 31), rgb(180, 160, 46), rgb(255, 246, 196));
+        background: linear-gradient(90deg, rgba(29,53,87,1) 0%, rgba(69,123,157,1) 53%, rgba(168,218,220,1) 100%);
         margin-top: 5%;
         margin-bottom: 2%;
     }
@@ -97,7 +97,7 @@ session_start();
 
 <body>
 
-    <header id="topheader" style="background:black;">
+    <header id="topheader" style="background:#254e58;">
         <?php include 'navbar.php'; ?>
     </header>
     <!-- header section ends -->

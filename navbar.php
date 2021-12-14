@@ -63,7 +63,8 @@ header .dropdown-menu li:hover a {
 }
 
 header .contact {
-    background: white;
+    background: radial-gradient(circle, rgba(136,189,188,1) 0%, rgba(62,128,146,1) 100%);
+    /* background: #88bdbc; */
     border-radius: 10px;
 }
 
@@ -98,7 +99,7 @@ header .contact:hover a{
 }
 
 .footer .icon-box div {
-    background: black;
+    background: none;
     border-radius: 50%;
 }
 
@@ -107,7 +108,7 @@ header .contact:hover a{
 }
 
 .footer .icon-box div:hover {
-    background: white;
+    background: #88bdbc;
 }
 
 .footer .icon-box div:hover i {
@@ -115,11 +116,11 @@ header .contact:hover a{
 }
 
 .footer .contact p i {
-    color: black;
+    color: white;
 }
 
 .footer .contact p:hover i {
-    color: blue;
+    color: #88bdbc;
 }
 </style>
   
@@ -179,7 +180,7 @@ let navvv = document.getElementById("navbar");
 window.onscroll = () => {
     if (window.pageYOffset > 200) {
 
-        navvv.style.background = "#000000";
+        navvv.style.background = "#112d32";
         navvv.style.boxShadow = "0px 4px 8px rgba(0,0,0,.5)";
     }
     else {

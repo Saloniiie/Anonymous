@@ -2,7 +2,7 @@
 <html lang="en">
 <body>
     
-<section class="footer" style="background:gray">
+<section class="footer" style="background:#112d32;color:white;">
       <div class="box-container row px-5 py-5">
 
       <div class="col-md-4">

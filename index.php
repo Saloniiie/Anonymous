@@ -100,7 +100,8 @@ session_start();
   }
   
   .hero h3 span:hover {
-      background: white;
+      background: linear-gradient(90deg, rgba(29,53,87,1) 0%, rgba(69,123,157,1) 53%, rgba(168,218,220,1) 100%);
+      border: none;
   }
   
   @media (max-width:800px)
@@ -153,11 +154,11 @@ session_start();
     </section>
 
     <section style="background:white;padding:100px 0;position:relative;">
-        <img src="assests/images/home/blog.png" alt="">
+        <img src="assests/images/home/aaa.png" alt="">
         <div style="position: absolute;top:55%; left: 3rem;right:3rem;transform:translateY(-55%);">
             <div class="row">
             <div class="col-md-6">
-            <h1 class="mb-5 text-uppercase">Opportunities</h1>
+            <h1 class="mb-5 text-uppercase" style="color:#e9b000;">Opportunities</h1>
             <p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod incidunt minus repudiandae eius impedit numquam qui sapiente magnam vitae dolorem, laboriosam expedita provident deserunt ipsa? Porro dolorem amet quo illum?Lorem ipsum dolor sit amet...</p>
             <button href="Singleblog.php?topic=opportunities" class="btn btn-dark">Read more</button>
             </div>
@@ -166,7 +167,7 @@ session_start();
     </section>
 
     <section style="background:white;padding:100px 0;position:relative;">
-        <img src="assests/images/home/blog2.png" alt="">
+        <img src="assests/images/home/ggg.png" alt="">
         <div style="position: absolute;top:55%; left: 3rem;right:3rem;transform:translateY(-55%);">
             <div class="row">
                 <div class="col-md-6"></div>
@@ -180,7 +181,7 @@ session_start();
     </section>
 
     <section style="background:white;padding:100px 0;position:relative;">
-        <img src="assests/images/home/blog.png" alt="">
+        <img src="assests/images/home/sss.png" alt="">
         <div style="position: absolute;top:55%; left: 3rem;right:3rem;transform:translateY(-55%);">
             <div class="row">
             <div class="col-md-6">

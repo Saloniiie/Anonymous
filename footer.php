@@ -6,7 +6,7 @@
       <div class="box-container row px-5 py-5">
 
       <div class="col-md-4">
-       <div class="text-center pb-5"><img src="AntiqueGallery/assests/images/logo.png" alt="" style="width:30%;"></div>
+       <div class="text-center pb-5"><img src="assets/images/logo.png" alt="" style="width:60%;"></div>
        </div>
 
        <div class="col-md-4">
@@ -22,17 +22,17 @@
                         New Delhi, Delhi 110007
           </p>
           <p> <i class="fas fa-phone"></i>
-            +91 xxxxxxxxxx
+          <a href="tel:+91xxxxxxxxxx" class="text-white">+91 xxxxxxxxxx</a>
           </p>
           <p> <i class="fas fa-envelope"></i>
-            binod@gmail.com
+           <a href="mailto:sk27102002@gmail.com" class="text-white">binod@gmail.com</a>
           </p>
        </div>
         
         
         </div> 
 
-        <div class="mb-0"> <h1 class="credit text-center pb-3 px-2" style="font-size:1rem;"> All rights reserved © 2021 | Developed by Team BINOD </h1>
+        <div class="m-0"> <h1 class="credit text-center pb-3 px-2" style="font-size:1rem;"> All rights reserved © 2021 | Developed by Team BINOD </h1>
         <div class="d-flex flex-row justify-content-center align-items-center icon-box pb-5">
             <div class="mx-1"><a href=""><i class="fab fa-linkedin-in p-2" style="font-size: 1.3rem;"></i></a></div>
             <div class="mx-1"><a href=""><i class="fab fa-instagram p-2" style="font-size: 1.3rem;"></i></a></div>

@@ -15,7 +15,7 @@ session_start();
 
 <head>
     <!-- Tab Icon -->
-    <link rel="icon" href="assests/images/logo.png" type="image/icon type">
+    <link rel="icon" href="assets/images/logo.png" type="image/icon type">
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -28,8 +28,8 @@ session_start();
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
 
-    <!-- <link rel="stylesheet" href="assests/css/navbar.css"> -->
-    <!-- <link rel="stylesheet" href="assests/css/index.css"> -->
+    <!-- <link rel="stylesheet" href="assets/css/navbar.css"> -->
+    <!-- <link rel="stylesheet" href="assets/css/index.css"> -->
 
 
     <title>BINOD</title>
@@ -100,7 +100,7 @@ session_start();
   }
   
   .hero h3 span:hover {
-      background: linear-gradient(90deg, rgba(29,53,87,1) 0%, rgba(69,123,157,1) 53%, rgba(168,218,220,1) 100%);
+      background: radial-gradient(circle, rgba(136,189,188,1) 0%, rgba(62,128,146,1) 100%);
       border: none;
   }
   
@@ -124,6 +124,16 @@ session_start();
       }
   }
 
+  .homecontent {
+      font-size: 3rem;
+  }
+
+  @media (max-width:500px) {
+    .homecontent {
+      font-size: 1.5rem !important;
+  }
+  }
+
 </style>
 
 <body id="home">
@@ -136,8 +146,8 @@ session_start();
  <!--***************************************** hero section *****************************************************-->
     <section class="hero">
 
-       <video class="backgroundVideo" autoplay loop muted poster="assests/images/home/home.png">
-         <source src="assests/videos/home.mp4" type="video/mp4">
+       <video class="backgroundVideo" autoplay loop muted poster="assets/images/home/home.png">
+         <source src="assets/videos/home.mp4" type="video/mp4">
        </video>
 
        <div class="video-overlay"></div>
@@ -147,18 +157,22 @@ session_start();
        <h3><span><a href="pricing.php">EXPLORE</a></span></h3>
     </section>
 
-    <section style="background:white;margin-top:60vh;padding-top:50px;">
-        <div class="m-5 p-5 mb-0">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, facilis provident numquam atque saepe vitae deleniti eius veritatis quasi odit, at amet, veniam ad quos illum temporibus. Laudantium ducimus quidem porro velit nulla voluptate. Ipsum voluptas, eum, ex tempora, obcaecati vitae nam consectetur tenetur molestias ratione perferendis earum quaerat voluptatum.
-        </div>
+
+    <div style="background:white;">
+
+    <section style="margin-top:60vh;padding-top:50px;">
+    <div class="m-5">
+    
+    
+    </div>
     </section>
 
-    <section style="background:white;padding:100px 0;position:relative;">
-        <img src="assests/images/home/aaa.png" alt="">
+    <section style="position:relative;margin-top:100px;">
+        <img src="assets/images/home/aaa.png" alt="">
         <div style="position: absolute;top:55%; left: 3rem;right:3rem;transform:translateY(-55%);">
             <div class="row">
             <div class="col-md-6">
-            <h1 class="mb-5 text-uppercase" style="color:#e9b000;">Opportunities</h1>
+            <h1 class="mb-5 text-uppercase">Opportunities</h1>
             <p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod incidunt minus repudiandae eius impedit numquam qui sapiente magnam vitae dolorem, laboriosam expedita provident deserunt ipsa? Porro dolorem amet quo illum?Lorem ipsum dolor sit amet...</p>
             <button href="Singleblog.php?topic=opportunities" class="btn btn-dark">Read more</button>
             </div>
@@ -166,8 +180,8 @@ session_start();
         </div>
     </section>
 
-    <section style="background:white;padding:100px 0;position:relative;">
-        <img src="assests/images/home/ggg.png" alt="">
+    <section style="position:relative;margin-top:100px;">
+        <img src="assets/images/home/ggg.png" alt="">
         <div style="position: absolute;top:55%; left: 3rem;right:3rem;transform:translateY(-55%);">
             <div class="row">
                 <div class="col-md-6"></div>
@@ -180,8 +194,8 @@ session_start();
         </div>
     </section>
 
-    <section style="background:white;padding:100px 0;position:relative;">
-        <img src="assests/images/home/sss.png" alt="">
+    <section style="position:relative;margin-top:100px;padding-bottom:100px;">
+        <img src="assets/images/home/sss.png" alt="">
         <div style="position: absolute;top:55%; left: 3rem;right:3rem;transform:translateY(-55%);">
             <div class="row">
             <div class="col-md-6">
@@ -192,9 +206,20 @@ session_start();
             </div>
         </div>
     </section>
+    </div>
+
+    <section class="m-5">
+        <div class="m-5 p-5 mb-0 text-center homecontent" style="color:white; background:radial-gradient(circle, rgba(101,105,112,1) 0%, rgba(0,0,0,1) 100%);font-family: 'Birthstone', cursive;">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat?
+        </div>
+    </section>
+
+    
 
 
     <?php include 'footer.php'; ?>
+
+    
  </main>  
 
 
@@ -202,7 +227,7 @@ session_start();
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
 
-    <!-- <script src="assests/js/main.js"></script>   -->
+    <!-- <script src="assets/js/main.js"></script>   -->
     
 </body>
 

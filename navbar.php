@@ -15,7 +15,7 @@ session_start();
 
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
-
+    @import url('https://fonts.googleapis.com/css2?family=Birthstone&family=Festive&family=Fredericka+the+Great&family=Niconne&family=Oleo+Script&family=Pinyon+Script&family=Rye&display=swap');
 *{
     padding: 0;
     margin: 0;
@@ -64,7 +64,6 @@ header .dropdown-menu li:hover a {
 
 header .contact {
     background: radial-gradient(circle, rgba(136,189,188,1) 0%, rgba(62,128,146,1) 100%);
-    /* background: #88bdbc; */
     border-radius: 10px;
 }
 
@@ -128,7 +127,7 @@ header .contact:hover a{
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark" aria-label="Ninth navbar example" id="navbar">
             <div class="container-xl">
-                <img src="AntiqueGallery/assests/images/logo.png" alt="" class="image-fluid rounded-circle" style="width:8vh">
+                <img src="assets/images/logo.png" alt="" class="image-fluid rounded-circle" style="width:10vh">
                 <a class="navbar-brand brand" href="#">&nbspBINOD&nbsp&nbsp</a>
                 <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarsExample07XL" aria-controls="navbarsExample07XL" aria-expanded="false"

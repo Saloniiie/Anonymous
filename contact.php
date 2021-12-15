@@ -20,7 +20,7 @@ session_start();
     <title>Contact US</title>
 
     <!-- Tab Icon -->
-    <link rel="icon" href="assests/images/logo.png" type="image/icon type">
+    <link rel="icon" href="assets/images/logo.png" type="image/icon type">
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -43,7 +43,7 @@ session_start();
         width: 100%;
         height: 100vh;
         z-index: -1;
-        background: linear-gradient(90deg, rgba(29,53,87,1) 0%, rgba(69,123,157,1) 53%, rgba(168,218,220,1) 100%);
+        background: radial-gradient(circle, rgba(136,189,188,1) 0%, rgba(62,128,146,1) 100%);
         margin-top: 5%;
         margin-bottom: 2%;
     }
@@ -97,7 +97,7 @@ session_start();
 
 <body>
 
-    <header id="topheader" style="background:#254e58;">
+    <header id="topheader" style="background:black;">
         <?php include 'navbar.php'; ?>
     </header>
     <!-- header section ends -->
@@ -106,7 +106,7 @@ session_start();
 
         <section>
             <div class="hero">
-                <img src="assests/images/home/home.png">
+                <img src="assets/images/home/home.png">
                 <h1 class="headline"><strong>Reach Us</strong></h1>
             </div>
         </section>
@@ -121,7 +121,7 @@ session_start();
     <?php //include 'footer.php'; ?>
 
 
-    <script src="assests/js/main.js"></script>
+    <script src="assets/js/main.js"></script>
 
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"

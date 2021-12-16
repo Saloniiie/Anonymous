@@ -17,7 +17,7 @@ session_start();
 
 <head>
 
-    <title>Contact US</title>
+    <title>Contact Us</title>
 
     <!-- Tab Icon -->
     <link rel="icon" href="assets/images/logo.png" type="image/icon type">

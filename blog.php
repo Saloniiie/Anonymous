@@ -77,6 +77,22 @@ session_start();
      margin-top: 100px;
    }
  }
+
+ .container p .btn {
+   background: radial-gradient(circle, rgba(136,189,188,1) 0%, rgba(62,128,146,1) 100%);
+ }
+
+ .container p .btn a {
+   color: black;
+ }
+
+ .container p .btn:hover {
+   background: black;
+ }
+
+ .container p .btn:hover a {
+   color: white;
+ }
 </style>
 
 
@@ -93,48 +109,73 @@ session_start();
             <div class="header2-info text-center">
                 <h1><b><span class="typed-text"></span><span class="cursor text-white">&nbsp;</span></b></h1>
                 <br>
-                <h2>For the love of Antiques!</h2>
+                <h2>Lorem ipsum dolor sit amet!</h2>
                 <br>
             </div>
         </div>
+
+        <?php include '_dbConnect.php';
+              $sql = "select * from blog";
+              $result = mysqli_query($conn,$sql);
+
+              while($row = mysqli_fetch_assoc($result)) : ?>
         
 
+        <div class="container">
+            <div class="row" style="padding: 3%;">
 
-        <div class="card m-5">
-          <div class="row g-0">
-            <div class="col-md-5">
-               <img src="assets/images/home/ggg.png" class="img-fluid rounded-start" alt="...">
-            </div>
-            <div class="col-md-7">
-               <div class="card-body">
-                   <h5 class="card-title">Card title</h5>
-                   <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                   <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                </div>
-            </div>
-          </div>
-        </div>
+               <div class="col-xs-12 col-sm-12 col-lg-6" style="padding-right: 6%;padding: 3%;  padding-top: 5%; "> 
+                    <img src="<?= $row['image'] ?>" class="img-fluid" style="box-shadow: -5px 5px 8px rgba(0,0,0,.5); background:#112d32;">
+               </div>
+    
+            <div class="col-xs-12 col-sm-12 col-lg-6" style="padding: 3%;">
+                 <br><br><br><br>
+                 <span style="padding: 10px;padding-left:0; font-size: 30px;"> <strong><?= strtoupper($row['topic']) ?></strong> </span> <br><br>
+      
+              <p><br>
+                 <span style="font-size: 18px; "> <?= $row['sdesc'] ?> </span>
+      
 
-        <div class="card m-5">
-          <div class="row g-0">
-          <div class="col-md-5 order-md-2">
-               <img src="assets/images/home/sss.png" class="img-fluid rounded-start" alt="...">
+                 <br><br><br><br>
+                 <span class="btn"><a href="blogpage.php?topic=<?= $row['topic'] ?>">  &nbsp; Read more  &nbsp; </a></span>
+                 <span style="float:right; font-size:1.5rem;"><i class="fas fa-share-alt"></i>&nbsp;&nbsp;</span>
+                 <span class="text-muted" style="float:right; font-size:1.5rem;"><i class="fas fa-eye"></i>&nbsp; <?=$row['views']?>&nbsp;&nbsp;&nbsp;</span>
+                 <br><br>
+              </p>
             </div>
-            <div class="col-md-7 order-md-1">
-               <div class="card-body">
-                   <h5 class="card-title">Card title</h5>
-                   <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                   <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                </div>
+           </div>
+         </div>
+
+         <?php if($row2 = mysqli_fetch_assoc($result)) : ?>
+         <div class="container">
+            <div class="row" style="padding: 3%;">
+
+               <div class="col-xs-12 col-sm-12 col-lg-6 order-lg-2" style="padding-right: 6%;padding: 3%;  padding-top: 5%;"> 
+                    <img src="<?= $row2['image'] ?>" class="img-fluid" style="box-shadow: 5px 5px 8px rgba(0,0,0,.5); background:#112d32;">
+               </div>
+    
+            <div class="col-xs-12 col-sm-12 col-lg-6 order-lg-1" style="padding: 3%;">
+                 <br><br><br><br>
+                 <span style="padding: 10px;padding-left:0; font-size: 30px;"> <strong><?= strtoupper($row2['topic']) ?></strong> </span> <br><br>
+      
+              <p><br>
+                 <span style="font-size: 18px; "> <?= $row2['sdesc'] ?> </span>
+      
+
+                 <br><br><br><br>
+                 <span class="btn"><a href="blogpage.php?topic=<?= $row2['topic'] ?>">  &nbsp; Read more  &nbsp; </a></span>
+                 <span style="float:right; font-size:1.5rem;"><i class="fas fa-share-alt"></i>&nbsp;&nbsp;</span>
+                 <span class="text-muted" style="float:right; font-size:1.5rem;"><i class="fas fa-eye"></i>&nbsp; <?=$row2['views']?>&nbsp;&nbsp;&nbsp;</span>
+                 <br><br>
+              </p>
             </div>
-          </div>
-        </div>
+           </div>
+         </div> 
 
-
-        <div style="background:radial-gradient(circle, rgba(101,105,112,1) 0%, rgba(0,0,0,1) 100%);" class="m-5">
-        <div class="p-5 my-5 text-white">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, libero molestiae minus tempore dignissimos dicta veritatis quia saepe fugiat reprehenderit animi unde iste earum nisi sed omnis nostrum, quas, quisquam impedit quasi quis maiores. Amet delectus similique quaerat dolor accusamus velit consequatur harum repellat, veniam aliquam! Numquam molestias nostrum debitis quidem. Neque, quo quam! Amet numquam fuga facere est consectetur possimus provident explicabo omnis dignissimos illum voluptate esse, earum, ullam vel sit
-        </div> </div>
+         <?php endif; ?>
+         <?php endwhile; ?>
+        
+         <br><br><br>
 
         <?php include 'footer.php' ; ?>
 

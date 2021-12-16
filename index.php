@@ -206,19 +206,20 @@ session_start();
             </div>
         </div>
     </section>
-    </div>
+    
 
     <section class="m-5">
         <div class="m-5 p-5 mb-0 text-center homecontent" style="color:white; background:radial-gradient(circle, rgba(101,105,112,1) 0%, rgba(0,0,0,1) 100%);font-family: 'Birthstone', cursive;">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat?
         </div>
     </section>
+    
 
     
 
 
     <?php include 'footer.php'; ?>
-
+    </div>
     
  </main>  
 

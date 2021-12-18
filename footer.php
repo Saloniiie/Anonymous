@@ -17,7 +17,7 @@
 
        <div class="col-md-4 text-center contact">
          <h4 class="text-center">Contact Us</h4>
-         <p> <i class="fas fa-home"></i>
+         <p> <i class="fas fa-map-marker-alt"></i>
                         University Enclave,<br>
                         New Delhi, Delhi 110007
           </p>

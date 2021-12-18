@@ -87,7 +87,7 @@ session_start();
  }
 
  .container p .btn:hover {
-   background: black;
+   background: #112d32;
  }
 
  .container p .btn:hover a {
@@ -130,7 +130,7 @@ session_start();
     
             <div class="col-xs-12 col-sm-12 col-lg-6" style="padding: 3%;">
                  <br><br><br><br>
-                 <span style="padding: 10px;padding-left:0; font-size: 30px;"> <strong><?= strtoupper($row['topic']) ?></strong> </span> <br><br>
+                 <span style="padding: 10px;padding-left:0; font-size: 30px;font-family:Playfair Display SC;"> <strong><?= strtoupper($row['topic']) ?></strong> </span> <br><br>
       
               <p><br>
                  <span style="font-size: 18px; "> <?= $row['sdesc'] ?> </span>

@@ -14,6 +14,7 @@ session_start();
 <html lang="en">
 
 <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Birthstone&family=Festive&family=Fredericka+the+Great&family=Niconne&family=Oleo+Script&family=Pinyon+Script&family=Rye&display=swap');
 *{

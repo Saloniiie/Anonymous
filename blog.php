@@ -130,7 +130,7 @@ session_start();
     
             <div class="col-xs-12 col-sm-12 col-lg-6" style="padding: 3%;">
                  <br><br><br><br>
-                 <span style="padding: 10px;padding-left:0; font-size: 30px;font-family:Playfair Display SC;"> <strong><?= strtoupper($row['topic']) ?></strong> </span> <br><br>
+                 <span style="padding: 10px;padding-left:0; font-size: 30px;font-family:Playfair Display SC;"><strong><?= strtoupper($row['topic']) ?></strong></span> <br><br>
       
               <p><br>
                  <span style="font-size: 18px; "> <?= $row['sdesc'] ?> </span>
@@ -156,7 +156,7 @@ session_start();
     
             <div class="col-xs-12 col-sm-12 col-lg-6 order-lg-1" style="padding: 3%;">
                  <br><br><br><br>
-                 <span style="padding: 10px;padding-left:0; font-size: 30px;"> <strong><?= strtoupper($row2['topic']) ?></strong> </span> <br><br>
+                 <span style="padding: 10px;padding-left:0; font-size: 30px;font-family:Playfair Display SC;"> <strong><?= strtoupper($row2['topic']) ?></strong> </span> <br><br>
       
               <p><br>
                  <span style="font-size: 18px; "> <?= $row2['sdesc'] ?> </span>
@@ -182,7 +182,9 @@ session_start();
 
     </main>
 
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
 
 
     <script>

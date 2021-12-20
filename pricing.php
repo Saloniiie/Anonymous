@@ -1,184 +1,157 @@
-<div class="fond"> <span class="s1">blog </span><span class="s2">card</span></div>
-<div class="card">
-  <div class="thumbnail"><img class="left" src="https://cdn2.hubspot.net/hubfs/322787/Mychefcom/images/BLOG/Header-Blog/photo-culinaire-pexels.jpg"/></div>
-  <div class="right">
-    <h1>Why you Need More Magnesium in Your Daily Diet</h1>
-    <div class="author"><img src="https://randomuser.me/api/portraits/men/95.jpg"/>
-      <h2>Igor MARTY</h2>
-    </div>
-    <div class="separator"></div>
-    <p>Magnesium is one of the six essential macro-minerals that is required by the body for energy production and synthesis of protein and enzymes. It contributes to the development of bones and most importantly it is responsible for synthesis of your DNA and RNA. A new report that has appeared in theBritish Journal of Cancer, gives you another reason to add more magnesium to your diet...</p>
-  </div>
-  <h5>12</h5>
-  <h6>JANUARY</h6>
-  <ul>
-    <li><i class="fa fa-eye fa-2x"></i></li>
-    <li><i class="fa fa-heart-o fa-2x"></i></li>
-    <li><i class="fa fa-envelope-o fa-2x"></i></li>
-    <li><i class="fa fa-share-alt fa-2x"></i></li>
-  </ul>
-  <div class="fab"><i class="fa fa-arrow-down fa-3x"> </i></div>
-</div>
+<?php
+//Tell PHP to log errors
+ini_set('log_errors', 'On');
+//Tell PHP to not display errors
+ini_set('display_errors', 'Off');
+//Set error_reporting to E_ALL
+ini_set('error_reporting', E_ALL );
+
+// Start the session
+session_start();
+?>
+
+<!doctype html>
+<html lang="en">
+
+
+
+<head>
+
+  <title>Pricing</title>
+
+  <!-- Tab Icon -->
+  <link rel="icon" href="assets/images/logo.png" type="image/icon type">
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+  <!-- font awesome cdn link  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+</head>
 
 
 <style>
-    @import url(https://fonts.googleapis.com/css?family=Roboto);
-/*Just the background stuff*/
-span.s1 {
-  position: absolute;
-  top: 0;
-  font-size: 15rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  color: #3C4447;
-}
+  @media (min-width:1100px) {
+    .container .row {
+      margin: 5%;
+    }
+  }
 
-span.s2 {
-  font-weight: 800;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  font-size: 15rem;
-  text-transform: uppercase;
-  color: #3C4447;
-}
+  .read-more {
+    color: #112d32;
+    cursor: pointer;
+    text-decoration: none;
+  }
 
-/*My hum... body.. yeah..*/
-body {
-  background-color: #353B3F;
-  font-family: "Roboto", sans-serif;
-}
-
-/* The card */
-.card {
-  position: relative;
-  height: 450px;
-  width: 900px;
-  margin: 200px auto;
-  background-color: #FFF;
-  -webkit-box-shadow: 10px 10px 93px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 10px 10px 93px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 10px 10px 93px 0px rgba(0, 0, 0, 0.75);
-}
-
-/* Image on the left side */
-.thumbnail {
-  float: left;
-  position: relative;
-  left: 30px;
-  top: -30px;
-  height: 320px;
-  width: 530px;
-  -webkit-box-shadow: 10px 10px 60px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 10px 10px 60px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 10px 10px 60px 0px rgba(0, 0, 0, 0.75);
-  overflow: hidden;
-}
-
-/*object-fit: cover;*/
-/*object-position: center;*/
-img.left {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  height: auto;
-  width: 100%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
-/* Right side of the card */
-.right {
-  margin-left: 590px;
-  margin-right: 20px;
-}
-
-h1 {
-  padding-top: 15px;
-  font-size: 1.3rem;
-  color: #4B4B4B;
-}
-
-.author {
-  background-color: #9ECAFF;
-  height: 30px;
-  width: 110px;
-  border-radius: 20px;
-}
-
-.author > img {
-  padding-top: 5px;
-  margin-left: 10px;
-  float: left;
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
-}
-
-h2 {
-  padding-top: 8px;
-  margin-right: 6px;
-  text-align: right;
-  font-size: 0.8rem;
-}
-.separator {
-  margin-top: 10px;
-  border: 1px solid #C3C3C3;
-}
-
-p {
-  text-align: justify;
-  padding-top: 10px;
-  font-size: 0.95rem;
-  line-height: 150%;
-  color: #4B4B4B;
-}
-
-/* DATE of release*/
-h5 {
-  position: absolute;
-  left: 30px;
-  bottom: -120px;
-  font-size: 6rem;
-  color: #C3C3C3;
-}
-
-h6 {
-  position: absolute;
-  left: 30px;
-  bottom: -55px;
-  font-size: 2rem;
-  color: #C3C3C3;
-}
-
-/* Those futur buttons */
-ul {
-  margin-left: 250px;
-}
-
-li {
-  display: inline;
-  list-style: none;
-  padding-right: 40px;
-  color: #7B7B7B;
-}
-
-/* Floating action button */
-.fab {
-  position: absolute;
-  right: 50px;
-  bottom: -40px;
-  box-sizing: border-box;
-  padding-top: 18px;
-  background-color: #1875D0;
-  width: 80px;
-  height: 80px;
-  color: white;
-  text-align: center;
-  border-radius: 50%;
-  -webkit-box-shadow: 10px 10px 50px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 10px 10px 50px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 10px 10px 50px 0px rgba(0, 0, 0, 0.75);
-}
+  .read-more:hover,
+  .read-more:focus,
+  .read-more:visited {
+    color: black;
+    text-decoration: none;
+  }
 </style>
+
+
+<body>
+
+  <header id="topheader" style="background:black;">
+    <?php include 'navbar.php'; ?>
+  </header>
+  <!-- header section ends -->
+
+  <main>
+    <br><br><br><br><br>
+
+    <div class="container my-5">
+      <div class="row bg-white" style="box-shadow: 10px 10px 93px 0px rgba(0, 0, 0, 0.75);">
+        <div class="col-lg-7"><img src="assets/images/home/pricing.jfif" alt="" class="img-fluid"
+            style="margin-top:-10%;margin-right:0;padding:5%"></div>
+        <div class="col-lg-5 p-5 position-relative">
+          <h2 class="text-center"
+            style="font-size: 30px;font-family:Playfair Display SC;color: #252830;font-weight:400;">German</h2>
+          <br>
+          <div style="height:3px;background:#112d32;"></div> <br>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa doloribus laudantium fuga itaque at quisquam
+            aliquam neque error harum. Vel eius veritatis voluptas quam, architecto obcaecati beatae doloribus. Iste
+            reprehenderit explicabo optio nulla debitis, minus voluptates unde fuga cum magni nesciunt ducimus eum
+            laudantium eos pariatur nisi aliquam quis quisquam.</p> <br>
+          <div style="margin-right:-15%; margin-bottom:-20%; float:right;" class="read-more"><i
+              class="fas fa-chevron-circle-down fa-4x"></i></div>
+        </div>
+      </div>
+    </div> <br>
+
+    <div class="container my-5">
+      <div class="row bg-white" style="box-shadow: 10px 10px 93px 0px rgba(0, 0, 0, 0.75);">
+        <div class="col-lg-7 order-lg-2"><img src="assets/images/home/pricing.jfif" alt="" class="img-fluid"
+            style="margin-top:-10%;margin-right:0;padding:5%"></div>
+        <div class="col-lg-5 p-5 order-lg-1 position-relative">
+          <h2 class="text-center"
+            style="font-size: 30px;font-family:Playfair Display SC;color: #252830;font-weight:400;">German</h2>
+          <br>
+          <div style="height:3px;background:#112d32;"></div> <br>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa doloribus laudantium fuga itaque at quisquam
+            aliquam neque error harum. Vel eius veritatis voluptas quam, architecto obcaecati beatae doloribus. Iste
+            reprehenderit explicabo optio nulla debitis, minus voluptates unde fuga cum magni nesciunt ducimus eum
+            laudantium eos pariatur nisi aliquam quis quisquam.</p> <br>
+          <div style="margin-left:-15%; margin-bottom:-20%; float:left;" class="read-more"><i
+              class="fas fa-chevron-circle-down fa-4x"></i></div>
+        </div>
+      </div>
+    </div> <br>
+
+    <div class="container my-5">
+      <div class="row bg-white" style="box-shadow: 10px 10px 93px 0px rgba(0, 0, 0, 0.75);">
+        <div class="col-lg-7"><img src="assets/images/home/pricing.jfif" alt="" class="img-fluid"
+            style="margin-top:-10%;margin-right:0;padding:5%"></div>
+        <div class="col-lg-5 p-5 position-relative">
+          <h2 class="text-center"
+            style="font-size: 30px;font-family:Playfair Display SC;color: #252830;font-weight:400;">German</h2>
+          <br>
+          <div style="height:3px;background:#112d32;"></div> <br>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa doloribus laudantium fuga itaque at quisquam
+            aliquam neque error harum. Vel eius veritatis voluptas quam, architecto obcaecati beatae doloribus. Iste
+            reprehenderit explicabo optio nulla debitis, minus voluptates unde fuga cum magni nesciunt ducimus eum
+            laudantium eos pariatur nisi aliquam quis quisquam.</p> <br>
+          <div style="margin-right:-15%; margin-bottom:-20%; float:right;" class="read-more"><i
+              class="fas fa-chevron-circle-down fa-4x"></i></div>
+        </div>
+      </div>
+    </div> <br>
+
+    <div class="container my-5">
+      <div class="row bg-white" style="box-shadow: 10px 10px 93px 0px rgba(0, 0, 0, 0.75);">
+        <div class="col-lg-7 order-lg-2"><img src="assets/images/home/pricing.jfif" alt="" class="img-fluid"
+            style="margin-top:-10%;margin-right:0;padding:5%"></div>
+        <div class="col-lg-5 p-5 order-lg-1 position-relative">
+          <h2 class="text-center"
+            style="font-size: 30px;font-family:Playfair Display SC;color: #252830;font-weight:400;">German</h2>
+          <br>
+          <div style="height:3px;background:#112d32;"></div> <br>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa doloribus laudantium fuga itaque at quisquam
+            aliquam neque error harum. Vel eius veritatis voluptas quam, architecto obcaecati beatae doloribus. Iste
+            reprehenderit explicabo optio nulla debitis, minus voluptates unde fuga cum magni nesciunt ducimus eum
+            laudantium eos pariatur nisi aliquam quis quisquam.</p> <br>
+          <div style="margin-left:-15%; margin-bottom:-20%; float:left;" class="read-more"><i
+              class="fas fa-chevron-circle-down fa-4x"></i></div>
+        </div>
+      </div>
+    </div> <br>
+
+
+    <?php include 'footer.php' ; ?>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>

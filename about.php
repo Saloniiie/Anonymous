@@ -42,7 +42,10 @@ session_start();
     margin: 25px auto;
     width: 40px;
   }
-
+  .about{
+    color: white !important;
+    font-weight: bold !important;
+  }
   .read-more {
     bottom: 25px;
     color: #112d32;
@@ -255,13 +258,7 @@ session_start();
       </div>
     </div>
 
-    <!-- ************************************************************************************************************************************** -->
-    <br><br>
-    <section>
-        <img src="assets/images/home/aaa.png" alt="" style="width:100vw; height:50vh;">
-    </section> <br><br><br><br>
-    <!-- ************************************************************************************************************************************** -->
-
+    <br><br><br><br>
     <!--****************************************************** crew section ***************************************************************-->
 
     <section class="crew" style="background:black;color:white;"> <br><br><br><br>

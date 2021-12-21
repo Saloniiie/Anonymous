@@ -37,6 +37,10 @@ session_start();
 
 <style>
     /******************* hero ******************/
+.home{
+    color: white !important;
+    font-weight: bold !important;
+}
  .hero .backgroundVideo {
     width: 100vw;
     height: 100vh;

@@ -16,7 +16,6 @@ session_start();
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Birthstone&family=Festive&family=Fredericka+the+Great&family=Niconne&family=Oleo+Script&family=Pinyon+Script&family=Rye&display=swap');
 *{
     padding: 0;
     margin: 0;
@@ -75,7 +74,7 @@ header .contact a {
 
 header .contact:hover {
     background:none;
-    border: 3px solid white;
+    border: 1px solid white;
 }
 
 header .contact:hover a{
@@ -139,13 +138,13 @@ header .contact:hover a{
                 <div class="navbar-collapse collapse" id="navbarsExample07XL">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+                            <a class="nav-link home" aria-current="page" href="index.php">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="blog.php">Blog</a>
+                            <a class="nav-link blog" href="blog.php">Blog</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="dropdown07XL" data-bs-toggle="dropdown"
+                            <a class="nav-link dropdown-toggle Languages" id="dropdown07XL" data-bs-toggle="dropdown"
                                 aria-expanded="false">Languages</a>
                             <ul class="dropdown-menu" aria-labelledby="dropdown07XL">
                                 <?php
@@ -162,13 +161,13 @@ header .contact:hover a{
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="pricing.php">Pricing</a>
+                            <a class="nav-link pricing" href="pricing.php">Pricing</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="about.php">About Us</a>
+                            <a class="nav-link about" href="about.php">About Us</a>
                         </li>
                     </ul>
-                    <div class="contact"><a class="nav-link" href="contact.php">Contact Us</a></div>
+                    <div class="contact"><a class="nav-link contact" href="contact.php">Contact Us</a></div>
                 </div>
             </div>
         </nav>

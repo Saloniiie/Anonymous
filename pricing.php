@@ -41,8 +41,23 @@ session_start();
     .container .row {
       margin: 5%;
     }
+    .aboutprice {
+      margin: 5%;
+      padding-top: 5%;
+    }
+    .comparison {
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+    .whyus {
+      margin-left: 8%;
+      margin-right: 8%;
+    }
   }
-
+  .pricing{
+    color: white !important;
+    font-weight: bold !important;
+  }
   .read-more {
     color: #112d32;
     cursor: pointer;
@@ -55,6 +70,27 @@ session_start();
     color: black;
     text-decoration: none;
   }
+
+  .aboutprice {
+    margin-top: 70vh;
+  }
+  @media (min-width:500px) and (max-width:1100px) {
+     .aboutprice {
+       margin-top: 55vh;
+     }
+  }
+  @media (max-width:500px) {
+     .aboutprice {
+       margin-top: 40vh;
+     }
+  }
+
+  .comparison .col-lg-4 p {
+    background: radial-gradient(circle, rgba(136,189,188,1) 0%, rgba(62,128,146,1) 100%);
+    color: black;
+    border-radius: 30px;
+  }
+
 </style>
 
 
@@ -66,7 +102,18 @@ session_start();
   <!-- header section ends -->
 
   <main>
-    <br><br><br><br><br>
+    
+
+  <!-- ************************************************************************************************************************ -->
+    
+    <img src="assets/images/price.jfif" alt="" style="width:100vw;position:absolute;top:0;left:0;background-attachment:fixed;z-index:-1;">
+
+    <div class="bg-white">
+    <div class="aboutprice px-5"> <br><br>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio assumenda esse voluptatum tempore tempora sint sit non vel dolorum eos odio ipsam doloremque fuga quod nam libero voluptatibus quaerat laboriosam, fugit incidunt deleniti eius. Eos ipsum asperiores cupiditate officiis nobis corrupti corporis omnis ut tenetur. Voluptate, provident dignissimos optio voluptatibus eius quidem ipsum velit ab neque ex culpa esse amet nihil nesciunt quaerat, eos tempore doloremque quisquam cupiditate sequi enim corporis. Totam libero aspernatur, alias repellat omnis, autem iusto vero saepe expedita vel incidunt in suscipit hic repudiandae corporis laudantium numquam necessitatibus modi nisi quia optio, enim nam ducimus voluptatum. Explicabo harum consequatur repellat sint error mollitia modi sit, possimus cupiditate accusamus voluptatibus veritatis obcaecati nihil doloribus magnam adipisci voluptas ad tempore quia voluptatem dolorem necessitatibus numquam. Vero, possimus ullam error voluptatem facere quisquam, eos cumque nemo distinctio vitae ut libero, eligendi aperiam perferendis necessitatibus in repudiandae cupiditate perspiciatis excepturi!
+    </div> <br><br><br>
+
+    <!-- ************************************************************************************************************************ -->
 
     <div class="container my-5">
       <div class="row bg-white" style="box-shadow: 10px 10px 93px 0px rgba(0, 0, 0, 0.75);">
@@ -143,7 +190,38 @@ session_start();
         </div>
       </div>
     </div> <br>
+    </div>
 
+<!-- ************************************************************************************************************************ -->
+
+
+    <div style="background:black; color:white;">
+    <br><br><br>
+    <h1 class="text-center">Comparison with Competitors</h1> <br>
+    <div class="text-center"><div style="background:radial-gradient(circle, rgba(136, 189, 188, 1) 0%, rgba(62, 128, 146, 1) 100%);height:3px;width:30vw;margin:auto;"></div></div> <br>
+    <br><br>
+    <div class="row comparison px-5">
+      <div class="col-lg-4 p-2">
+        <p class="p-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero id harum expedita tenetur cum perspiciatis enim omnis modi blanditiis ab ratione nam velit, doloremque suscipit quibusdam maxime totam illum obcaecati placeat asperiores distinctio deserunt voluptatibus? Atque dolorem voluptate magnam veritatis, culpa repudiandae necessitatibus illo reiciendis quam soluta quasi vel optio.</p>
+      </div>
+      <div class="col-lg-4 p-2">
+        <p class="p-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero id harum expedita tenetur cum perspiciatis enim omnis modi blanditiis ab ratione nam velit, doloremque suscipit quibusdam maxime totam illum obcaecati placeat asperiores distinctio deserunt voluptatibus? Atque dolorem voluptate magnam veritatis, culpa repudiandae necessitatibus illo reiciendis quam soluta quasi vel optio.</p>
+      </div>
+      <div class="col-lg-4 p-2">
+        <p class="p-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero id harum expedita tenetur cum perspiciatis enim omnis modi blanditiis ab ratione nam velit, doloremque suscipit quibusdam maxime totam illum obcaecati placeat asperiores distinctio deserunt voluptatibus? Atque dolorem voluptate magnam veritatis, culpa repudiandae necessitatibus illo reiciendis quam soluta quasi vel optio.</p>
+      </div>
+    </div>  <br><br><br><br>
+
+    <!-- ************************************************************************************************************************ -->
+
+    <h2 class="text-center">Why Us?</h2> <br>
+    <div class="text-center"><div style="background:radial-gradient(circle, rgba(136, 189, 188, 1) 0%, rgba(62, 128, 146, 1) 100%);height:3px;width:30vw;margin:auto;"></div></div> <br><br><br>
+    <div class="whyus">
+      <p class="p-5" style="border:3px solid white;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium, odio tempora rem accusantium eum exercitationem quam blanditiis aliquam, excepturi placeat accusamus a optio itaque quis ab ipsum in ipsam perspiciatis repudiandae magnam esse odit. Quod dicta voluptatibus fugiat soluta labore, voluptas quae praesentium odio molestias, corporis nihil, accusamus architecto modi excepturi omnis eius similique. Tenetur at aspernatur libero officiis adipisci labore eius, expedita neque reprehenderit dolorum ipsa veritatis doloremque velit numquam esse rerum eligendi porro totam ea a, quas dicta similique quae iure! Debitis, sequi suscipit deleniti, voluptates error blanditiis cupiditate voluptas illo iure rem nobis autem at iste, architecto officiis? Illum reiciendis rerum placeat, possimus repellendus, tenetur provident repellat nemo reprehenderit culpa obcaecati corrupti quis odit. Quisquam ex laudantium, vel debitis ratione nisi ea porro atque explicabo voluptates nulla iste odit ipsa consequuntur numquam impedit enim vitae quae molestias aperiam delectus! Optio in neque corporis inventore nisi blanditiis dolore?</p> <br><br><br><br>
+    </div>
+    </div>
+
+    <!-- ************************************************************************************************************************ -->
 
     <?php include 'footer.php' ; ?>
   </main>

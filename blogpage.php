@@ -61,6 +61,10 @@ $resultt = mysqli_query($conn,$sqlll);
 .row h1 {
   font-weight: 200;
 }
+.blog{
+      color: white !important;
+    font-weight: bold !important;
+    }
 .card .wrapper {
   background-color: #fff;
   min-height: 500px;

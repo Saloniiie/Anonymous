@@ -37,6 +37,10 @@ session_start();
 
 
 <style>
+    .blog{
+      color: white !important;
+    font-weight: bold !important;
+    }
     .header2{
     padding: 15%;
     width: 100%;

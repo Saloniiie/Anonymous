@@ -96,36 +96,11 @@ header .contact:hover a{
         font-size: 1rem;
     }
 }
-
-.footer .icon-box div {
-    background: none;
-    border-radius: 50%;
-}
-
-.footer .icon-box div i {
-    color: white;
-}
-
-.footer .icon-box div:hover {
-    background: #88bdbc;
-}
-
-.footer .icon-box div:hover i {
-    color: black;
-}
-
-.footer .contact p i {
-    color: white;
-}
-
-.footer .contact p:hover i {
-    color: #88bdbc;
-}
 </style>
   
 
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark" aria-label="Ninth navbar example" id="navbar">
+<nav class="navbar navbar-expand-lg navbar-dark p-4" aria-label="Ninth navbar example" id="navbar">
             <div class="container-xl">
                 <img src="assets/images/logo.png" alt="" class="image-fluid rounded-circle" style="width:10vh">
                 <a class="navbar-brand brand" href="#">&nbspBINOD&nbsp&nbsp</a>
@@ -160,9 +135,9 @@ header .contact:hover a{
                                 <?php endforeach; ?>
                             </ul>
                         </li>
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a class="nav-link pricing" href="pricing.php">Pricing</a>
-                        </li>
+                        </li> -->
                         <li class="nav-item">
                             <a class="nav-link about" href="about.php">About Us</a>
                         </li>

@@ -36,36 +36,13 @@ session_start();
 </head>
 
 <style>
-  .divider {
-    background: #112d32;
-    height: 2px;
-    margin: 25px auto;
-    width: 40px;
-  }
+
   .about{
     color: white !important;
     font-weight: bold !important;
   }
-  .read-more {
-    bottom: 25px;
-    color: #112d32;
-    cursor: pointer;
-    left: 50%;
-    padding: 5px;
-    text-decoration: none;
-  }
-
-  .read-more:hover,
-  .read-more:focus,
-  .read-more:visited {
-    color: black;
-    text-decoration: none;
-  }
-
-  @media (min-width:1100px) {
-    .container .row {
-      margin: 5%;
-    }
+  
+  @media (min-width:700px) {
     .hero2 {
       margin: 5%;
     }
@@ -74,59 +51,84 @@ session_start();
     }
   }
 
-  .hero {
-    width: 100%;
-    height: 70vh;
-    background: url("assets/images/home/about.png") top center;
-    background-size: cover;
-    background-attachment: fixed;
+ /* ****************************** hero section ******************************  */
+  #my-section {
+  position: relative;
   }
 
-  .hero .hero-container {
-    position: relative;
-    z-index: 2;
-    min-width: 300px;
+  #wrap-cta {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(0, -50%);
+  opacity: 0;
+  }
+  #wrap-cta.active {
+  z-index: 2;
+  transform: translate(-50%, -50%);
+  transition: transform 0.6s, opacity 0.6s;
+  opacity: 1;
+  }
+  #wrap-cta #cta {
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  color: #f2f2f2;
+  background: transparent;
+  border: 2px solid;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: background 0.4s;
+  }
+  #wrap-cta #cta:hover {
+  background: rgba(242, 242, 242, 0.1);
   }
 
-  .hero .hello {
-    margin: 0 0 10px 0;
-    font-size: 300%;
-    font-weight: 500;
-    line-height: 56px;
-    color: #fff;
+  svg {
+  display: block;
+  width: 100%;
+  height: 70vh;
+  }
+  svg .polymorph {
+  fill: rgb(62,128,146);
   }
 
-  .hero .name {
-    font-size: 250%;
-    font-weight: 500;
-    line-height: 56px;
-    color: #fff;
-    font-family: "Poppins", sans-serif;
+  .container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
   }
-
-  @media (max-width:768px) {
-    .hero .hero-container {
-      margin-left: 50px;
-      font-size: 100%;
-    }
-
-    .hero {
-      width: 100vw;
-      height: 100vh;
-    }
+  .container #content {
+  transform: translateY(-50px);
+  opacity: 0;
+  color: #112d32;
+  transition: transform 0.6s 0.2s, opacity 0.6s 0.2s;
   }
-
-  @media (max-width:500px) {
-
-    .hero .hero-container {
-      margin-left: 40px;
-      font-size: 60%;
-    }
-
-    .hero {
-      width: 100vw;
-      height: 100vh;
-    }
+  .container #content #close {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  color: #112d32;
+  background: transparent;
+  border: 2px solid;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: background 0.4s;
+  }
+  .container #content #close:hover {
+  background: rgba(62,128,146,.3);
+  }
+  .container #content.active {
+  z-index: 4;
+  transform: translateY(0);
+  opacity: 1;
   }
 </style>
 
@@ -142,12 +144,22 @@ session_start();
 
     <!--********** Hero Section **********-->
 
-    <section class="hero d-flex flex-column justify-content-center align-items-center">
-      <div class="hero-container">
-        <div class="hello">Lorem, ipsum dolor.</div>
-        <div class="name">Lorem ipsum dolor sit amet.</div>
+    <section id="my-section">
+       <div class="active" id="wrap-cta">
+          <button id="cta">Click here, please!</button>
+       </div>
+       <svg viewBox="0 0 215 110" preserveAspectRatio="none">
+         <polygon class="polymorph" points="215,110 0,110 0,0 215,0"></polygon>
+       </svg>
+       <div class="container">
+          <div id="content">
+             <h1>Lorem ipsum dolor sit amet</h1>
+             <p>Dolor sit amet et consectquo lorem ipsum dolor sit amet</p>
+             <button id="close">Ok, close me</button>
+          </div>
       </div>
-    </section> <!--*** End Hero Section ***-->
+    </section>
+    <!--*** End Hero Section ***-->
 
 
     <!-- ************************************************************************************************************************************** -->
@@ -156,112 +168,12 @@ session_start();
     </section>
     <!-- ************************************************************************************************************************************** -->
 
-
-    <div class="container">
-      <div class="row my-5">
-
-        <div class="col-xs-12 col-sm-12 col-lg-6 text-center text-justify p-0">
-          <img src="assets/images/home/blog.jfif" class="img-fluid" style="background:#112d32;">
-        </div>
-
-        <div class="col-xs-12 col-sm-12 col-lg-6 p-5" style="box-shadow: 2px 2px 2px -1px rgba(0, 0, 0, 0.75);"> <br>
-          <div style="font-size: 30px;font-family:Playfair Display SC;color: #252830;font-weight:400;"
-            class="text-center">Spanish</div>
-          <div class="divider"></div>
-
-          <p><span style="font-weight:300; font-size:18px;" class="text-muted text-justify">Lorem ipsum dolor sit amet
-              consectetur, adipisicing elit. Quia consequuntur eum, sequi ea dolorum provident odio nihil sapiente neque
-              voluptate laudantium blanditiis officiis. Velit quas, deserunt, libero placeat hic nulla quasi, veritatis
-              mollitia iusto quam perspiciatis illo! Dicta, possimus assumenda. Natus itaque exercitationem velit libero
-              nulla adipisci ea odit ullam? </span></p> <br><br>
-
-          <div class="text-center"><a href="languages.php?lname=" class="read-more"><i
-                class="fas fa-chevron-circle-down fa-3x"></i></a></div>
-
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="row my-5">
-
-        <div class="col-xs-12 col-sm-12 col-lg-6 order-lg-2 text-center text-justify p-0">
-          <img src="assets/images/home/blog.jfif" class="img-fluid" style="background:#112d32;">
-        </div>
-
-        <div class="col-xs-12 col-sm-12 col-lg-6 order-lg-1 p-5" style="box-shadow: -2px 2px 2px -1px rgba(0, 0, 0, 0.75);"> <br>
-          <div style="font-size: 30px;font-family:Playfair Display SC;color: #252830;font-weight:400;"
-            class="text-center">Spanish</div>
-          <div class="divider"></div>
-
-          <p><span style="font-weight:300; font-size:18px;" class="text-muted text-justify">Lorem ipsum dolor sit amet
-              consectetur, adipisicing elit. Quia consequuntur eum, sequi ea dolorum provident odio nihil sapiente neque
-              voluptate laudantium blanditiis officiis. Velit quas, deserunt, libero placeat hic nulla quasi, veritatis
-              mollitia iusto quam perspiciatis illo! Dicta, possimus assumenda. Natus itaque exercitationem velit libero
-              nulla adipisci ea odit ullam? </span></p> <br><br>
-
-          <div class="text-center"><a href="languages.php?lname=" class="read-more"><i
-                class="fas fa-chevron-circle-down fa-3x"></i></a></div>
-
-        </div>
-      </div>
-    </div>
-
-
-    <div class="container">
-      <div class="row my-5">
-
-        <div class="col-xs-12 col-sm-12 col-lg-6 text-center text-justify p-0">
-          <img src="assets/images/home/blog.jfif" class="img-fluid" style="background:#112d32;">
-        </div>
-
-        <div class="col-xs-12 col-sm-12 col-lg-6 p-5" style="box-shadow: 2px 2px 2px -1px rgba(0, 0, 0, 0.75);"> <br>
-          <div style="font-size: 30px;font-family:Playfair Display SC;color: #252830;font-weight:400;"
-            class="text-center">Spanish</div>
-          <div class="divider"></div>
-
-          <p><span style="font-weight:300; font-size:18px;" class="text-muted text-justify">Lorem ipsum dolor sit amet
-              consectetur, adipisicing elit. Quia consequuntur eum, sequi ea dolorum provident odio nihil sapiente neque
-              voluptate laudantium blanditiis officiis. Velit quas, deserunt, libero placeat hic nulla quasi, veritatis
-              mollitia iusto quam perspiciatis illo! Dicta, possimus assumenda. Natus itaque exercitationem velit libero
-              nulla adipisci ea odit ullam? </span></p> <br><br>
-
-          <div class="text-center"><a href="languages.php?lname=" class="read-more"><i
-                class="fas fa-chevron-circle-down fa-3x"></i></a></div>
-
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="row my-5">
-
-        <div class="col-xs-12 col-sm-12 col-lg-6 order-lg-2 text-center text-justify p-0">
-          <img src="assets/images/home/blog.jfif" class="img-fluid" style="background:#112d32;">
-        </div>
-
-        <div class="col-xs-12 col-sm-12 col-lg-6 order-lg-1 p-5" style="box-shadow: -2px 2px 2px -1px rgba(0, 0, 0, 0.75);"> <br>
-          <div style="font-size: 30px;font-family:Playfair Display SC;color: #252830;font-weight:400;"
-            class="text-center">Spanish</div>
-          <div class="divider"></div>
-
-          <p><span style="font-weight:300; font-size:18px;" class="text-muted text-justify">Lorem ipsum dolor sit amet
-              consectetur, adipisicing elit. Quia consequuntur eum, sequi ea dolorum provident odio nihil sapiente neque
-              voluptate laudantium blanditiis officiis. Velit quas, deserunt, libero placeat hic nulla quasi, veritatis
-              mollitia iusto quam perspiciatis illo! Dicta, possimus assumenda. Natus itaque exercitationem velit libero
-              nulla adipisci ea odit ullam? </span></p> <br><br>
-
-          <div class="text-center"><a href="languages.php?lname=" class="read-more"><i
-                class="fas fa-chevron-circle-down fa-3x"></i></a></div>
-
-        </div>
-      </div>
-    </div>
+    
 
     <br><br><br><br>
     <!--****************************************************** crew section ***************************************************************-->
 
-    <section class="crew" style="background:black;color:white;"> <br><br><br><br>
+    <!-- <section class="crew" style="background:black;color:white;"> <br><br><br><br>
 
         <div class="d-flex text-center text-justify mx-5">
           <div class="flex-grow-1" style="background:white; height:3px;"></div>
@@ -280,10 +192,7 @@ session_start();
         </div>
 
         <br><br><br>  <div style="background:white; height:3px;" class="mx-5"></div>  <br><br><br>
-
-        <h2 class="text-center text-white">What make us different?</h2> <br>
-        <p class="mx-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic modi, natus error fugiat rem neque libero dolorem quae molestias reprehenderit voluptatibus excepturi? Ratione quod asperiores repellat eos, reprehenderit, nesciunt ipsum exercitationem eaque totam, illum ipsam nemo impedit quos omnis distinctio maiores beatae quae mollitia molestias laudantium quas aliquid assumenda ut! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero veritatis itaque ipsa molestias sequi, culpa provident quas. Sapiente veritatis nulla doloribus praesentium quibusdam quos consequatur facere! Itaque, suscipit. Commodi ratione asperiores quos reiciendis, ullam aliquam explicabo labore velit quasi atque porro, laudantium, esse architecto rerum accusamus voluptatum dolorem similique ex. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil soluta mollitia numquam perferendis illo sunt, cum ipsam rem magni deserunt assumenda, delectus doloribus dolore dignissimos ad id! Qui, officiis modi fuga quae voluptatum in recusandae ipsum harum vero id, eius, perferendis cumque. Inventore cupiditate necessitatibus earum, autem enimm!</p> <br><br><br><br>
-    </section>
+    </section> -->
 
     <!-- ************************************************************************************************************************************** -->
 
@@ -293,6 +202,56 @@ session_start();
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+<script>
+   const wrapCta = document.querySelector('#wrap-cta'),
+   btnCta = document.querySelector('#cta'),
+   content = document.querySelector('#content'),
+   btnClose = document.querySelector('#close');
+
+
+  // Anime.js Commons Values for SVG Morph
+  const common = {
+  targets: '.polymorph',
+  easing: 'easeOutQuad',
+  duration: 600,
+  loop: false };
+
+
+
+  // Show content
+  btnCta.addEventListener('click', () => {
+  // Elements apparence
+  wrapCta.classList.remove('active');
+  content.classList.add('active');
+
+  // Morph SVG
+  anime({
+    ...common,
+    points: [
+    { value: '215,110 0,110 186,86 215,0' }] });
+
+
+  });
+
+
+  // Hide content  
+  btnClose.addEventListener('click', () => {
+  // Elements apparence
+  content.classList.remove('active');
+  wrapCta.classList.add('active');
+
+  // Morph SVG
+  anime({
+    ...common,
+    points: [
+    { value: '215,110 0,110 0,0 215,0' }] });
+
+
+  });
+</script>
 
 </body>
 

@@ -1,5 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<style>
+  .footer .icon-box div {
+    background: none;
+    border-radius: 50%;
+}
+
+.footer .icon-box div i {
+    color: white;
+}
+
+.footer .icon-box div:hover {
+    background: #88bdbc;
+}
+
+.footer .icon-box div:hover i {
+    color: black;
+}
+
+.footer .contact p i {
+    color: white;
+}
+
+.footer .contact p:hover i {
+    color: #88bdbc;
+}
+</style>
+
 <body>
     
 <section class="footer" style="background:#112d32;color:white;">
@@ -43,5 +71,12 @@
     
       </section>
 
+
+      <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
 </body>
 </html>
+
+<!-- https://codepen.io/leemartin/pen/pxNvod -->
+
+<!-- https://codemyui.com/pure-css-page-turning-animation-for-images/ -->

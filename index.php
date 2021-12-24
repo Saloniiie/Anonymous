@@ -28,8 +28,6 @@ session_start();
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
 
-    <!-- <link rel="stylesheet" href="assets/css/navbar.css"> -->
-    <!-- <link rel="stylesheet" href="assets/css/index.css"> -->
 
 
     <title>BINOD</title>
@@ -138,6 +136,61 @@ session_start();
   }
   }
 
+  .read{
+  display: inline-block;
+  position: relative;
+  color: black;
+  text-decoration: none;
+  padding: 1rem;
+  font-weight: 900;
+}
+.read:before, .read:after {
+  will-change: transform;
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+}
+.read:before {
+  transition: 100ms ease-out 50ms;
+  transform-origin: 0 49px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+}
+.read:after {
+  transition: 50ms ease-out;
+  transform: scaleX(0);
+  transform-origin: left center;
+  bottom: 2px;
+  right: -12px;
+  border: 8px solid transparent;
+  border-left-color: white;
+}
+.read:hover {
+    color: black;
+}
+.read:hover:before {
+  transition: 100ms ease-out;
+  transform: scaleY(0.15);
+  background: white;
+}
+.read:hover:after {
+  transition: 50ms ease-out 100ms;
+  transform: none;
+}
+.read:active:before {
+  transition: 100ms ease-in;
+  background: white;
+}
+.read:active:after {
+  transition: 100ms ease-in;
+  border-left-color: white;
+}
+
+
 </style>
 
 <body id="home">
@@ -158,7 +211,7 @@ session_start();
 
        <h1>THIS IS A RIVER.</h1>
        <h2>How majestic.</h2>
-       <h3><span><a href="pricing.php">EXPLORE</a></span></h3>
+       <h3><span><a href="about.php">EXPLORE</a></span></h3>
     </section>
 
 
@@ -178,7 +231,7 @@ session_start();
             <div class="col-md-6">
             <h1 class="mb-5 text-uppercase">Opportunities</h1>
             <p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod incidunt minus repudiandae eius impedit numquam qui sapiente magnam vitae dolorem, laboriosam expedita provident deserunt ipsa? Porro dolorem amet quo illum?Lorem ipsum dolor sit amet...</p>
-            <button href="Singleblog.php?topic=opportunities" class="btn btn-dark">Read more</button>
+            <a href="blogpage.php?topic=Spanish" class="read">Read more</a>
             </div>
             </div>
         </div>
@@ -192,7 +245,7 @@ session_start();
             <div class="col-md-6" style="float:right;">
             <h1 class="mb-5 text-uppercase">Opportunities</h1>
             <p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod incidunt minus repudiandae eius impedit numquam qui sapiente magnam vitae dolorem, laboriosam expedita provident deserunt ipsa? Porro dolorem amet quo illum?Lorem ipsum dolor sit amet...</p>
-            <button href="Singleblog.php?topic=opportunities" class="btn btn-dark">Read more</button>
+            <a href="blogpage.php?topic=Spanish" class="read">Read more</a>
             </div>
             </div>
         </div>
@@ -205,19 +258,11 @@ session_start();
             <div class="col-md-6">
             <h1 class="mb-5 text-uppercase">Opportunities</h1>
             <p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod incidunt minus repudiandae eius impedit numquam qui sapiente magnam vitae dolorem, laboriosam expedita provident deserunt ipsa? Porro dolorem amet quo illum?Lorem ipsum dolor sit amet...</p>
-            <button href="Singleblog.php?topic=opportunities" class="btn btn-dark">Read more</button>
+            <a href="blogpage.php?topic=Spanish" class="read">Read more</a>
             </div>
             </div>
         </div>
     </section>
-    
-
-    <section class="m-5">
-        <div class="m-5 p-5 mb-0 text-center homecontent" style="color:white; background:radial-gradient(circle, rgba(101,105,112,1) 0%, rgba(0,0,0,1) 100%);font-family: 'Birthstone', cursive;">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat?
-        </div>
-    </section>
-    
 
     
 

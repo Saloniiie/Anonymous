@@ -52,6 +52,8 @@ $resultt = mysqli_query($conn,$sqlll);
 
   <!-- font awesome cdn link  -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  
+  
 
 </head>
 
@@ -168,6 +170,7 @@ $resultt = mysqli_query($conn,$sqlll);
   .card .title a {
     color: #112d32;
   }
+
 </style>
 
 <body>
@@ -179,17 +182,17 @@ $resultt = mysqli_query($conn,$sqlll);
 
   <main>
 
-  <!-- ************************************************************************************************************************** -->
+    <!-- ************************************************************************************************************************** -->
 
     <div class="mt-5"><img src="<?=$roww['image']?>" alt=""
         style="width:100vw;background-attachment:fixed;position:absolute;z-index:-1;"></div>
 
 
-<!-- ************************************************************************************************************************** -->
+    <!-- ************************************************************************************************************************** -->
 
     <div style="background:white;margin-top:60vh;padding:50px; padding-top:100px;" class="px-md-5 mx-md-5">
       <div>
-        <h1 class="px-md-5" style="font-family:Playfair Display SC;">
+        <h1 class="px-md-5 main-title" style="font-family:Playfair Display SC;">
           <?= $roww['topic'] ?>
         </h1>
       </div>
@@ -207,29 +210,7 @@ $resultt = mysqli_query($conn,$sqlll);
         <div class="views text-muted"><i class="fas fa-eye"></i>&nbsp;
           <?=$roww['views']?>&nbsp;&nbsp;&nbsp;
         </div>
-        <!-- <div><a href="" class="share">&nbsp;&nbsp;&nbsp;<i class="fas fa-share-alt"></i></a></div> -->
-        <!-- Button trigger modal -->
-        <div class="share" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-          <i class="fas fa-share-alt"></i>
-</div>
-
-        <!-- Modal -->
-        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-          aria-labelledby="staticBackdropLabel" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="staticBackdropLabel">Share Blog</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body"></div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" style="background:radial-gradient(circle, rgba(136,189,188,1) 0%, rgba(62,128,146,1) 100%);" class="btn clipboard" onclick="copyurl()">Copy URL</button>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div class="share"><i class="fas fa-share-alt"></i></div>
       </div> <br><br>
     </div>
 
@@ -252,13 +233,15 @@ $resultt = mysqli_query($conn,$sqlll);
           <div class="wrapper" style="background: url(<?=$rowww['image']?>) 20% 1%/cover no-repeat;">
             <div class="data">
               <div class="content">
-                <span class="author">
-                  <?=$rowww['wname']?>
-                </span>
-                <span style="float:right;"><i class="fas fa-share-alt"></i></span>
-                <span style="float:right;"><i class="fas fa-eye"></i>
-                  <?=$rowww['views']?> &nbsp; &nbsp;
-                </span>
+                <div class="d-flex">
+                  <div class="author flex-grow-1">
+                    <?=$rowww['wname']?>
+                  </div>
+                  <div><i class="fas fa-eye"></i>&nbsp;
+                    <?=$rowww['views']?> &nbsp;&nbsp;
+                  </div>
+                  <div class="share2"><i class="fas fa-share-alt"></i></div>
+                </div>
                 <h1 class="title"><a href="blogpage.php?topic=<?=$rowww['topic']?>">
                     <?=$rowww['topic']?>
                   </a></h1>
@@ -277,6 +260,7 @@ $resultt = mysqli_query($conn,$sqlll);
 
     <!-- ************************************************************************************************************************** -->
 
+    <?php include 'modal.php' ; ?>
     <?php include 'footer.php' ; ?>
   </main>
 
@@ -286,18 +270,41 @@ $resultt = mysqli_query($conn,$sqlll);
     crossorigin="anonymous"></script>
 
   <script>
-    var $temp = $("<input>");
-    var $url = $(location).attr('href');
-    $(".modal-body").text($url);
 
-    function copyurl() {
-      $("body").append($temp);
-      $temp.val($url).select();
-       document.execCommand("copy");
-       $temp.remove();
-      $(".clipboard").text("URL copied!");
+    let share1 = document.querySelector('.share');
+    share1.addEventListener('click', () => {
+          modal1.classList.add('active');
+    });
+
+    var $url = $(location).attr('href');
+    $(".body1").text($url);
+
+    function copyurl1() {
+      copyToClipboard($url);
     }
-    
+
+
+
+    let share2 = document.querySelector('.share2');
+    share2.addEventListener('click', () => {
+          modal2.classList.add('active');
+          var title = $(this).closest('.content').find('.title').text();
+          var $url2 = $url.substr(0,$url.indexOf("=")+1);
+          $url2 += title; 
+          $(".body2").text($url2);
+    });
+
+    function copyurl2() {
+      copyToClipboard($url2);
+    }
+
+
+
+    function copyToClipboard(value) {
+      navigator.clipboard.writeText(value);
+      $(".clipboard").text("URL Copied !");
+    }
+
   </script>
 
 </body>

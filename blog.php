@@ -113,12 +113,12 @@ session_start();
     }
   }
 
-  .container .share i {
+  .container .share i, .container .share2 i {
     color: black;
     font-size: 1.5rem;
   }
 
-  .container .share:hover i {
+  .container .share:hover i, .container .share2:hover i {
     color: rgb(62, 128, 146);
   }
 
@@ -127,7 +127,7 @@ session_start();
   }
 
   @media (max-width:500px) {
-  .container .share i {
+  .container .share i, .container .share2 i {
       font-size: 1rem;
   }
   .container .views {
@@ -223,7 +223,7 @@ session_start();
 
         <div class="col-xs-12 col-sm-12 col-lg-6 p-5" style="box-shadow: 2px 2px 2px -1px rgba(0, 0, 0, 0.75);"> <br>
           <div style="font-size: 30px;font-family:Playfair Display SC;color: #252830;font-weight:400;"
-            class="text-center">
+            class="text-center title">
             <?=$row['topic']?>
           </div>
           <div class="divider"></div>
@@ -242,7 +242,7 @@ session_start();
           </svg>
           </a></div>
           <div class="text-muted views"><i class="fas fa-eye"></i>&nbsp;<?=$row['views']?>&nbsp;&nbsp;&nbsp;</div>
-          <div><a href="" class="share"><i class="fas fa-share-alt"></i></a>&nbsp;&nbsp;</div>
+          <div class="share"><i class="fas fa-share-alt"></i></div>
           </div>
           <br><br>
 
@@ -260,7 +260,7 @@ session_start();
 
         <div class="col-xs-12 col-sm-12 col-lg-6 order-lg-1 p-5" style="box-shadow: -2px 2px 2px -1px rgba(0, 0, 0, 0.75);"> <br>
           <div style="font-size: 30px;font-family:Playfair Display SC;color: #252830;font-weight:400;"
-            class="text-center">
+            class="text-center title2">
             <?=$row2['topic']?>
           </div>
           <div class="divider"></div>
@@ -279,7 +279,7 @@ session_start();
           </svg>
           </a></div>
           <div class="text-muted views"><i class="fas fa-eye"></i>&nbsp;<?=$row2['views']?>&nbsp;&nbsp;&nbsp;</div>
-          <div><a class="share"><i class="fas fa-share-alt"></i></a>&nbsp;&nbsp;</div>
+          <div class="share2"><i class="fas fa-share-alt"></i></div>
           </div>
           <br><br>
 
@@ -292,6 +292,7 @@ session_start();
 
     <br><br><br>
 
+    <?php include 'modal.php' ; ?>
     <?php include 'footer.php' ; ?>
 
 
@@ -300,6 +301,7 @@ session_start();
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
+    
 
 
   <script>
@@ -344,6 +346,46 @@ session_start();
     document.addEventListener("DOMContentLoaded", function () {
       if (textArray.length) setTimeout(type, newTextDelay + 250);
     });
+
+// *********************************************************************************************
+
+    var $url = $(location).attr('href');
+
+
+    let share = document.querySelector('.share');
+    share.addEventListener('click', () => {
+          modal1.classList.add('active');
+          var title = $(this).closest('.col-lg-6').find('.title').text();
+          var $url1 = $url.substr(0,$url.indexOf("b"));
+          $url1 = $url1 + "blogpage.php?topic=" + title; 
+          $(".body1").text($url1);
+    });
+
+    function copyurl1() {
+      copyToClipboard($url1);
+    }
+
+
+    let share2 = document.querySelector('.share2');
+    share2.addEventListener('click', () => {
+          modal2.classList.add('active');
+          var title2 = $(this).closest('.row').find('.title2').text();
+          var $url2 = $url.substr(0,$url.indexOf("b"));
+          $url2 = $url2 + "blogpage.php?topic=" + title2;
+          $(".body2").text($url2);
+    });
+
+    function copyurl2() {
+      copyToClipboard($url2);
+    }
+
+
+
+    function copyToClipboard(value) {
+      navigator.clipboard.writeText(value);
+      $(".clipboard").text("URL Copied !");
+    }
+
   </script>
 
 </body>

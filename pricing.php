@@ -20,7 +20,7 @@ session_start();
 	<title>Pricing</title>
 
 	<!-- Tab Icon -->
-	<link rel="icon" href="assets/images/logo.png" type="image/icon type">
+	<link rel="icon" href="assets/images/logoo.png" type="image/icon type">
 
 	<!-- Required meta tags -->
 	<meta charset="utf-8">

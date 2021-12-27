@@ -15,7 +15,7 @@ session_start();
 
 <head>
     <!-- Tab Icon -->
-    <link rel="icon" href="assets/images/logo.png" type="image/icon type">
+    <link rel="icon" href="assets/images/logoo.png" type="image/icon type">
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -203,8 +203,8 @@ session_start();
  <!--***************************************** hero section *****************************************************-->
     <section class="hero">
 
-       <video class="backgroundVideo" autoplay loop muted poster="assets/images/home/home.png">
-         <source src="assets/videos/home.mp4" type="video/mp4">
+       <video class="backgroundVideo" autoplay loop muted poster="assets/images/home/homee.png">
+         <source src="assets/videos/homee.mp4" type="video/mp4">
        </video>
 
        <div class="video-overlay"></div>

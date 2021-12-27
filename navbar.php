@@ -102,7 +102,7 @@ header .contact:hover a{
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark p-4" aria-label="Ninth navbar example" id="navbar">
             <div class="container-xl">
-                <img src="assets/images/logo.png" alt="" class="image-fluid rounded-circle" style="width:10vh">
+                <img src="assets/images/logoo.png" alt="" class="image-fluid rounded-circle" style="width:10vh">
                 <a class="navbar-brand brand" href="#">&nbspBINOD&nbsp&nbsp</a>
                 <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarsExample07XL" aria-controls="navbarsExample07XL" aria-expanded="false"

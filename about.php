@@ -20,7 +20,7 @@ session_start();
   <title>About Us</title>
 
   <!-- Tab Icon -->
-  <link rel="icon" href="assets/images/logo.png" type="image/icon type">
+  <link rel="icon" href="assets/images/logoo.png" type="image/icon type">
 
   <!-- Required meta tags -->
   <meta charset="utf-8">
@@ -130,6 +130,18 @@ session_start();
   transform: translateY(0);
   opacity: 1;
   }
+
+
+
+
+  /* ************************************************ bubble background **************************************************************** */
+  .ball {
+  position: absolute;
+  border-radius: 100%;
+  opacity: 0.7;
+  z-index: -5;
+}
+  
 </style>
 
 <body>
@@ -164,13 +176,14 @@ session_start();
 
     <!-- ************************************************************************************************************************************** -->
     <section class="my-5 hero2">
-      <p class="p-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit commodi eveniet ducimus, quae corrupti consequatur deserunt error, esse consectetur eum quisquam earum modi eligendi nesciunt, quidem magnam itaque provident a fugiat. Minus assumenda aperiam quasi blanditiis. Obcaecati delectus aut amet quam. Accusamus obcaecati amet quidem odit porro, nemo nisi facere. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid quia placeat dolore obcaecati accusantium eligendi ipsa autem aspernatur similique, hic laboriosam sit, voluptate repellat, earum numquam deleniti rem tempore repudiandae? Minus sapiente deleniti, nisi eveniet id nam tenetur corporis a ex praesentium voluptates sunt harum recusandae asperiores reiciendis expedita laudantium! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga perferendis recusandae, consequuntur reprehenderit dolore velit sunt quos, voluptate veritatis impedit, fugit hic vel officiis ut? Dignissimos blanditiis provident, similique eveniet facere ipsum eius sit iusto reprehenderit dolorum veniam quia, enim, asperiores cumque? Voluptatem omnis provident, iusto veritatis vitae minus quasi. </p>
+      <p class="p-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit commodi eveniet ducimus, quae corrupti consequatur deserunt error, esse consectetur eum quisquam earum modi eligendi nesciunt, quidem magnam itaque provident a fugiat. Minus assumenda aperiam quasi blanditiis. Obcaecati delectus aut amet quam. Accusamus obcaecati amet quidem odit porro, nemo nisi facere. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid quia placeat dolore obcaecati accusantium eligendi ipsa autem aspernatur similique, hic laboriosam sit, voluptate repellat, earum numquam deleniti rem tempore repudiandae? Minus sapiente deleniti, nisi eveniet id nam tenetur corporis a ex praesentium voluptates sunt harum recusandae asperiores reiciendis expedita laudantium! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga perferendis recusandae, consequuntur reprehenderit dolore velit sunt quos, voluptate veritatis impedit, fugit hic vel officiis ut? Dignissimos blanditiis provident, similique eveniet facere ipsum eius sit iusto reprehenderit dolorum veniam quia, enim, asperiores cumque? Voluptatem omnis provident, iusto veritatis vitae minus quasi. 
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque culpa quisquam ut necessitatibus mollitia quasi est consequatur dolor aliquid soluta aliquam fuga doloremque esse, ipsa delectus quos vero facilis dignissimos voluptates nisi corrupti voluptas, quae ad maxime? Sequi, repudiandae nemo. Itaque aut laborum inventore quam molestias ipsam repudiandae dignissimos dicta. </p>
     </section>
     <!-- ************************************************************************************************************************************** -->
 
     
 
-    <br><br><br><br>
+    <!-- <br><br><br><br> -->
     <!--****************************************************** crew section ***************************************************************-->
 
     <!-- <section class="crew" style="background:black;color:white;"> <br><br><br><br>
@@ -251,6 +264,49 @@ session_start();
 
 
   });
+
+
+  // Some random colors
+const colors = ["#3CC157", "#2AA7FF", "#1B1B1B", "#FCBC0F", "#F85F36"];
+
+const numBalls = 100;
+const balls = [];
+
+for (let i = 0; i < numBalls; i++) {
+  let ball = document.createElement("div");
+  ball.classList.add("ball");
+  ball.style.background = colors[Math.floor(Math.random() * colors.length)];
+  ball.style.left = `${Math.floor(Math.random() * 100)}vw`;
+  ball.style.top = `${Math.floor(Math.random() * 200)}vh`;
+  ball.style.transform = `scale(${Math.random()})`;
+  ball.style.width = `${Math.random()}em`;
+  ball.style.height = ball.style.width;
+  
+  balls.push(ball);
+  document.body.append(ball);
+}
+
+// Keyframes
+balls.forEach((el, i, ra) => {
+  let to = {
+    x: Math.random() * (i % 2 === 0 ? -11 : 11),
+    y: Math.random() * 12
+  };
+
+  let anim = el.animate(
+    [
+      { transform: "translate(0, 0)" },
+      { transform: `translate(${to.x}rem, ${to.y}rem)` }
+    ],
+    {
+      duration: (Math.random() + 1) * 2000, // random duration
+      direction: "alternate",
+      fill: "both",
+      iterations: Infinity,
+      easing: "ease-in-out"
+    }
+  );
+});
 </script>
 
 </body>

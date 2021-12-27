@@ -40,7 +40,7 @@ $resultt = mysqli_query($conn,$sqlll);
   </title>
 
   <!-- Tab Icon -->
-  <link rel="icon" href="assets/images/logo.png" type="image/icon type">
+  <link rel="icon" href="assets/images/logoo.png" type="image/icon type">
 
   <!-- Required meta tags -->
   <meta charset="utf-8">
@@ -240,7 +240,6 @@ $resultt = mysqli_query($conn,$sqlll);
                   <div><i class="fas fa-eye"></i>&nbsp;
                     <?=$rowww['views']?> &nbsp;&nbsp;
                   </div>
-                  <div class="share2"><i class="fas fa-share-alt"></i></div>
                 </div>
                 <h1 class="title"><a href="blogpage.php?topic=<?=$rowww['topic']?>">
                     <?=$rowww['topic']?>
@@ -282,22 +281,6 @@ $resultt = mysqli_query($conn,$sqlll);
     function copyurl1() {
       copyToClipboard($url);
     }
-
-
-
-    let share2 = document.querySelector('.share2');
-    share2.addEventListener('click', () => {
-          modal2.classList.add('active');
-          var title = $(this).closest('.content').find('.title').text();
-          var $url2 = $url.substr(0,$url.indexOf("=")+1);
-          $url2 += title; 
-          $(".body2").text($url2);
-    });
-
-    function copyurl2() {
-      copyToClipboard($url2);
-    }
-
 
 
     function copyToClipboard(value) {

@@ -20,7 +20,7 @@ session_start();
   <title>Blog</title>
 
   <!-- Tab Icon -->
-  <link rel="icon" href="assets/images/logo.png" type="image/icon type">
+  <link rel="icon" href="assets/images/logoo.png" type="image/icon type">
 
   <!-- Required meta tags -->
   <meta charset="utf-8">
@@ -260,7 +260,7 @@ session_start();
 
         <div class="col-xs-12 col-sm-12 col-lg-6 order-lg-1 p-5" style="box-shadow: -2px 2px 2px -1px rgba(0, 0, 0, 0.75);"> <br>
           <div style="font-size: 30px;font-family:Playfair Display SC;color: #252830;font-weight:400;"
-            class="text-center title2">
+            class="text-center title">
             <?=$row2['topic']?>
           </div>
           <div class="divider"></div>
@@ -302,7 +302,7 @@ session_start();
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
     
-
+  
 
   <script>
     const typedTextSpan = document.querySelector(".typed-text");
@@ -351,26 +351,30 @@ session_start();
 
     var $url = $(location).attr('href');
 
-
+    var title;
+    var $url1;
     let share = document.querySelector('.share');
     share.addEventListener('click', () => {
           modal1.classList.add('active');
-          var title = $(this).closest('.col-lg-6').find('.title').text();
-          var $url1 = $url.substr(0,$url.indexOf("b"));
+          title = $(this).closest('.row').find('.title').val();
+          $url1 = $url.substr(0,$url.indexOf("b"));
           $url1 = $url1 + "blogpage.php?topic=" + title; 
-          $(".body1").text($url1);
+          $(".body1").text($url1);     
     });
+
 
     function copyurl1() {
       copyToClipboard($url1);
     }
 
 
+    var title2;
+    var url2;
     let share2 = document.querySelector('.share2');
     share2.addEventListener('click', () => {
           modal2.classList.add('active');
-          var title2 = $(this).closest('.row').find('.title2').text();
-          var $url2 = $url.substr(0,$url.indexOf("b"));
+          title2 = $(this).closest('.row').find('.title').val();
+          $url2 = $url.substr(0,$url.indexOf("b"));
           $url2 = $url2 + "blogpage.php?topic=" + title2;
           $(".body2").text($url2);
     });

@@ -20,7 +20,7 @@ session_start();
     <title>Contact Us</title>
 
     <!-- Tab Icon -->
-    <link rel="icon" href="assets/images/logo.png" type="image/icon type">
+    <link rel="icon" href="assets/images/logoo.png" type="image/icon type">
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -416,7 +416,22 @@ session_start();
 
     <main>
 
+
     <div class="containerr">
+
+    <div class="clock" id="india">
+    <div class="clock__strokes">
+      <div id="strokesHours2" class="clock__strokes-hours"></div>
+      <div id="strokesMinutes2" class="clock__strokes-minutes"></div>
+    </div>
+    <div class="clock__pointers">
+      <div class="clock__pointers-hours" id="hours2"></div>
+      <div class="clock__pointers-minutes" id="minutes2"></div>
+      <div class="clock__pointers-seconds" id="seconds2"></div>
+      <div class="clock__pointers-dot"></div>
+    </div>
+  </div>
+
   <div class="clock" id="germany">
     <div class="clock__strokes">
       <div id="strokesHours" class="clock__strokes-hours"></div>
@@ -430,18 +445,6 @@ session_start();
     </div>
   </div>
 
-  <div class="clock" id="india">
-    <div class="clock__strokes">
-      <div id="strokesHours2" class="clock__strokes-hours"></div>
-      <div id="strokesMinutes2" class="clock__strokes-minutes"></div>
-    </div>
-    <div class="clock__pointers">
-      <div class="clock__pointers-hours" id="hours2"></div>
-      <div class="clock__pointers-minutes" id="minutes2"></div>
-      <div class="clock__pointers-seconds" id="seconds2"></div>
-      <div class="clock__pointers-dot"></div>
-    </div>
-  </div>
 
   <div class="clock" id="france">
     <div class="clock__strokes">
@@ -574,42 +577,7 @@ session_start();
         integrity="sha512-0xrMWUXzEAc+VY7k48pWd5YT6ig03p4KARKxs4Bqxb9atrcn2fV41fWs+YXTKb8lD2sbPAmZMjKENiyzM/Gagw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <script type="text/javascript">
-        const hero = document.querySelector('.hero');
-        const slider = document.querySelector('.slider');
-        const headline = document.querySelector('.headline');
-
-
-        const mytimeline = new TimelineMax();
-
-        mytimeline.fromTo(
-            hero,
-            1,
-            { height: "0%" },
-            { height: "80%", ease: Power2.easeInOut }
-        )
-            .fromTo(
-                hero,
-                1.2,
-                { width: "100%" },
-                { width: "80%", ease: Power2.easeInOut }
-            )
-            .fromTo(
-                slider,
-                1,
-                { x: "-100%" },
-                { x: "0%", ease: Power2.easeInOut },
-                "-=1"
-            )
-            .fromTo(
-                headline,
-                1,
-                { opacity: "0.4", x: "30%" },
-                { opacity: "1", x: "0%", ease: Power2.easeInOut },
-                "-=1"
-            )
-
-    </script>
+        
      <!-- clock thingy  -->
     <script>
         const hours = document.getElementById('hours');

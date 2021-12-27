@@ -34,7 +34,7 @@
       <div class="box-container row px-5 py-5">
 
       <div class="col-md-4">
-       <div class="text-center pb-5"><img src="assets/images/logo.png" alt="" style="width:60%;"></div>
+       <div class="text-center pb-5"><img src="assets/images/logoo.png" alt="" style="width:50%;"></div>
        </div>
 
        <div class="col-md-4">
@@ -80,3 +80,5 @@
 <!-- https://codepen.io/leemartin/pen/pxNvod -->
 
 <!-- https://codemyui.com/pure-css-page-turning-animation-for-images/ -->
+
+<!-- https://store.google.com/in/product/pixel_4a?hl=en-GB -->

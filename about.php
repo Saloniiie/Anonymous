@@ -131,16 +131,114 @@ session_start();
   opacity: 1;
   }
 
-
-
-
-  /* ************************************************ bubble background **************************************************************** */
+  /* ************************************************************************************************* */
   .ball {
-  position: absolute;
-  border-radius: 100%;
-  opacity: 0.7;
-  z-index: -5;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  border-radius: 50%;
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+  background: url('http://hop.ie/balls/images/world-map-one-color.png') repeat-x;
+  background-size: auto 100%;
+  -webkit-animation: move-map 30s infinite linear;
+  -moz-animation: move-map 30s infinite linear;
+  -o-animation: move-map 30s infinite linear;
+  -ms-animation: move-map 30s infinite linear;
+  animation: move-map 30s infinite linear;
 }
+
+.ball:before {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow: -40px 10px 70px 10px rgba(0,0,0,0.5) inset;
+  z-index: 2;
+}
+
+.ball:after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -webkit-filter: blur(0);
+  opacity: 0.3;
+  background: radial-gradient(circle at 50% 80%, #81e8f6, #76deef 10%, #055194 66%, #062745 100%);
+}
+
+.ball .shadow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0) 50%);
+  -webkit-transform: rotateX(90deg) translateZ(-150px);
+  -moz-transform: rotateX(90deg) translateZ(-150px);
+  -ms-transform: rotateX(90deg) translateZ(-150px);
+  -o-transform: rotateX(90deg) translateZ(-150px);
+  transform: rotateX(90deg) translateZ(-150px);
+  z-index: -1;
+}
+
+.stage {
+  width: 300px;
+  height: 300px;
+  display: inline-block;
+  margin: 20px;
+  -webkit-perspective: 1200px;
+  -moz-perspective: 1200px;
+  -ms-perspective: 1200px;
+  -o-perspective: 1200px;
+  perspective: 1200px;
+  -webkit-perspective-origin: 50% 50%;
+  -moz-perspective-origin: 50% 50%;
+  -ms-perspective-origin: 50% 50%;
+  -o-perspective-origin: 50% 50%;
+  perspective-origin: 50% 50%;
+} 
+
+@-moz-keyframes move-map {
+  0% {
+    background-position: -849px 0; }
+
+  100% {
+    background-position: 0 0; } }
+
+@-webkit-keyframes move-map {
+  0% {
+    background-position: 0 0; }
+  100% {
+    background-position: -849px 0; }
+}
+
+
+@-o-keyframes move-map {
+  0% {
+    background-position: -849px 0; }
+
+  100% {
+    background-position: 0 0; } }
+
+@-ms-keyframes move-map {
+  0% {
+    background-position: -849px 0; }
+
+  100% {
+    background-position: 0 0; } }
+
+@keyframes move-map {
+  0% {
+    background-position: -849px 0; }
+
+  100% {
+    background-position: 0 0; } }
   
 </style>
 
@@ -176,8 +274,13 @@ session_start();
 
     <!-- ************************************************************************************************************************************** -->
     <section class="my-5 hero2">
-      <p class="p-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit commodi eveniet ducimus, quae corrupti consequatur deserunt error, esse consectetur eum quisquam earum modi eligendi nesciunt, quidem magnam itaque provident a fugiat. Minus assumenda aperiam quasi blanditiis. Obcaecati delectus aut amet quam. Accusamus obcaecati amet quidem odit porro, nemo nisi facere. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid quia placeat dolore obcaecati accusantium eligendi ipsa autem aspernatur similique, hic laboriosam sit, voluptate repellat, earum numquam deleniti rem tempore repudiandae? Minus sapiente deleniti, nisi eveniet id nam tenetur corporis a ex praesentium voluptates sunt harum recusandae asperiores reiciendis expedita laudantium! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga perferendis recusandae, consequuntur reprehenderit dolore velit sunt quos, voluptate veritatis impedit, fugit hic vel officiis ut? Dignissimos blanditiis provident, similique eveniet facere ipsum eius sit iusto reprehenderit dolorum veniam quia, enim, asperiores cumque? Voluptatem omnis provident, iusto veritatis vitae minus quasi. 
+      <div class="row">
+        <div class="col-lg-3"><div class="stage"><figure class="ball"><span class="shadow"></span></figure></div></div>
+        <div class="col-lg-9">
+        <p class="p-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit commodi eveniet ducimus, quae corrupti consequatur deserunt error, esse consectetur eum quisquam earum modi eligendi nesciunt, quidem magnam itaque provident a fugiat. Minus assumenda aperiam quasi blanditiis. Obcaecati delectus aut amet quam. Accusamus obcaecati amet quidem odit porro, nemo nisi facere. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid quia placeat dolore obcaecati accusantium eligendi ipsa autem aspernatur similique, hic laboriosam sit, voluptate repellat, earum numquam deleniti rem tempore repudiandae? Minus sapiente deleniti, nisi eveniet id nam tenetur corporis a ex praesentium voluptates sunt harum recusandae asperiores reiciendis expedita laudantium! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga perferendis recusandae, consequuntur reprehenderit dolore velit sunt quos, voluptate veritatis impedit, fugit hic vel officiis ut? Dignissimos blanditiis provident, similique eveniet facere ipsum eius sit iusto reprehenderit dolorum veniam quia, enim, asperiores cumque? Voluptatem omnis provident, iusto veritatis vitae minus quasi. 
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque culpa quisquam ut necessitatibus mollitia quasi est consequatur dolor aliquid soluta aliquam fuga doloremque esse, ipsa delectus quos vero facilis dignissimos voluptates nisi corrupti voluptas, quae ad maxime? Sequi, repudiandae nemo. Itaque aut laborum inventore quam molestias ipsam repudiandae dignissimos dicta. </p>
+        </div>
+      </div>
     </section>
     <!-- ************************************************************************************************************************************** -->
 
@@ -266,47 +369,7 @@ session_start();
   });
 
 
-  // Some random colors
-const colors = ["#3CC157", "#2AA7FF", "#1B1B1B", "#FCBC0F", "#F85F36"];
-
-const numBalls = 100;
-const balls = [];
-
-for (let i = 0; i < numBalls; i++) {
-  let ball = document.createElement("div");
-  ball.classList.add("ball");
-  ball.style.background = colors[Math.floor(Math.random() * colors.length)];
-  ball.style.left = `${Math.floor(Math.random() * 100)}vw`;
-  ball.style.top = `${Math.floor(Math.random() * 200)}vh`;
-  ball.style.transform = `scale(${Math.random()})`;
-  ball.style.width = `${Math.random()}em`;
-  ball.style.height = ball.style.width;
   
-  balls.push(ball);
-  document.body.append(ball);
-}
-
-// Keyframes
-balls.forEach((el, i, ra) => {
-  let to = {
-    x: Math.random() * (i % 2 === 0 ? -11 : 11),
-    y: Math.random() * 12
-  };
-
-  let anim = el.animate(
-    [
-      { transform: "translate(0, 0)" },
-      { transform: `translate(${to.x}rem, ${to.y}rem)` }
-    ],
-    {
-      duration: (Math.random() + 1) * 2000, // random duration
-      direction: "alternate",
-      fill: "both",
-      iterations: Infinity,
-      easing: "ease-in-out"
-    }
-  );
-});
 </script>
 
 </body>

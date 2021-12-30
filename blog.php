@@ -305,6 +305,8 @@ session_start();
   
 
   <script>
+
+    // ********************************************* typing animation *******************************************************************
     const typedTextSpan = document.querySelector(".typed-text");
     const cursorSpan = document.querySelector(".cursor");
 
@@ -344,10 +346,10 @@ session_start();
     }
 
     document.addEventListener("DOMContentLoaded", function () {
-      if (textArray.length) setTimeout(type, newTextDelay + 250);
+      if (textArray.length) setTimeout(type, newTextDelay);
     });
 
-// *********************************************************************************************
+// ***************************************** copy url ****************************************************
 
     var $url = $(location).attr('href');
 
@@ -389,6 +391,48 @@ session_start();
       navigator.clipboard.writeText(value);
       $(".clipboard").text("URL Copied !");
     }
+
+
+  // ******************************************* image animation **************************************************
+  var images = document.querySelectorAll(".container > img");
+
+  function initialiseimage(img) {
+    img.setAttribute("data-visited",false);
+    img.style.width = 0 + "%";
+  }
+
+  for(var img of images) {
+    initialiseimage(img);
+  }
+
+  function fillimage(img) {
+    var currentwidth = 0;
+    var targetwidth = 100;
+    var interval = setInterval(function() {
+      if(currentwidth >= targetwidth) {
+        clearInterval(interval);
+        return;
+      }
+      currentwidth++;
+      img.style.width = currentwidth + "%";
+    },5);
+  }
+
+  function checkScroll() {
+    for(let img of images) {
+      var imgcoordinates = img.getBoundingClientRect();
+      if((img.setAttribute("data-visited")=="false") && (imgcoordinates.top <= (window.innerHeight - imgcoordinates.height))) {
+        img.setAttribute("data-visited",true);
+        fillimage(img);
+      }
+      else if(img.coordinates.top > window.innerHeight) {
+        img.setattribute("data-visited",false);
+        initialiseimage(img);
+      }
+    }
+  }
+
+  window.addEventListener("scroll",checkScroll);
 
   </script>
 

@@ -164,6 +164,30 @@ session_start();
   animation: move-map 30s infinite linear;
 }
 
+@media (max-width:1000px) {
+  .ball {
+    left: 50%;
+  }
+}
+
+@media (max-width:600px) {
+  .ball {
+    left: 20%;
+  }
+}
+
+@media (max-width:500px) {
+  .ball {
+    left: 10%;
+  }
+}
+
+@media (max-width:400px) {
+  .ball {
+    left: 3%;
+  }
+}
+
 .ball:before {
   content: "";
   position: absolute;
@@ -183,7 +207,7 @@ session_start();
   width: 100%;
   height: 100%;
   top: 0;
-  left: 0;
+  left: 0%;
   -webkit-filter: blur(0);
   opacity: 0.3;
   background: radial-gradient(circle at 50% 80%, #81e8f6, #76deef 10%, #055194 66%, #062745 100%);

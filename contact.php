@@ -20,7 +20,7 @@ session_start();
     <title>Contact Us</title>
 
     <!-- Tab Icon -->
-    <link rel="icon" href="assets/images/logoo.png" type="image/icon type">
+    <link rel="icon" href="assets/images/logo.png" type="image/icon type">
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -57,10 +57,10 @@ session_start();
     align-items: center;
     justify-content: space-evenly;
     background: radial-gradient(circle, rgba(136, 189, 188, 1) 0%, rgba(62, 128, 146, 1) 100%);
-    padding-bottom: 15vh;
+    padding-bottom: 20vh;
     flex-wrap: wrap;
     width: 100vw;
-    padding-top : 20vh;
+    padding-top : 25vh;
   }
   .clock{
     flex-shrink: 0;
@@ -260,12 +260,6 @@ session_start();
             display: none;
         }
 
-        /* navbar  */
-        /* :root {
-            --font: 'Ubuntu', sans-serif;
-            --theme-color: rgb(215, 165, 29);
-        } */
-        
         #map {
             height: fit-content;
             width: fit-content;
@@ -304,7 +298,6 @@ session_start();
             width: 100%;
             padding-left: 3%;
             padding-top: 2%;
-            /* font-family: var(--font); */
             text-transform: uppercase;
         }
 
@@ -317,7 +310,6 @@ session_start();
             margin: 0;
             margin-bottom: -2px;
             overflow: hidden;
-            /* font-family: var(--font); */
             border: none;
             outline: none;
             padding: 0 3% 3% 3%;
@@ -416,23 +408,8 @@ session_start();
 
     <main>
 
-
     <div class="containerr">
-
-    <div class="clock" id="india">
-    <div class="clock__strokes">
-      <div id="strokesHours2" class="clock__strokes-hours"></div>
-      <div id="strokesMinutes2" class="clock__strokes-minutes"></div>
-    </div>
-    <div class="clock__pointers">
-      <div class="clock__pointers-hours" id="hours2"></div>
-      <div class="clock__pointers-minutes" id="minutes2"></div>
-      <div class="clock__pointers-seconds" id="seconds2"></div>
-      <div class="clock__pointers-dot"></div>
-    </div>
-  </div>
-
-  <div class="clock" id="germany">
+  <div class="clock" id="india">
     <div class="clock__strokes">
       <div id="strokesHours" class="clock__strokes-hours"></div>
       <div id="strokesMinutes" class="clock__strokes-minutes"></div>
@@ -445,6 +422,18 @@ session_start();
     </div>
   </div>
 
+  <div class="clock" id="germany">
+    <div class="clock__strokes">
+      <div id="strokesHours2" class="clock__strokes-hours"></div>
+      <div id="strokesMinutes2" class="clock__strokes-minutes"></div>
+    </div>
+    <div class="clock__pointers">
+      <div class="clock__pointers-hours" id="hours2"></div>
+      <div class="clock__pointers-minutes" id="minutes2"></div>
+      <div class="clock__pointers-seconds" id="seconds2"></div>
+      <div class="clock__pointers-dot"></div>
+    </div>
+  </div>
 
   <div class="clock" id="france">
     <div class="clock__strokes">
@@ -510,7 +499,7 @@ session_start();
         </div>  <br><br><br><br>
 
     <div class="join-link">
-        <p class="text-white text-center px-5">Click here to join us : <button class="px-3"><a href="#">apply</a> </button></p>
+        <p class="text-white text-center px-5">Join Us : <button class="px-5"><a href="#">apply</a></button> </p>
 
     </div>
     <!-- help  -->
@@ -577,7 +566,42 @@ session_start();
         integrity="sha512-0xrMWUXzEAc+VY7k48pWd5YT6ig03p4KARKxs4Bqxb9atrcn2fV41fWs+YXTKb8lD2sbPAmZMjKENiyzM/Gagw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-        
+    <script type="text/javascript">
+        const hero = document.querySelector('.hero');
+        const slider = document.querySelector('.slider');
+        const headline = document.querySelector('.headline');
+
+
+        const mytimeline = new TimelineMax();
+
+        mytimeline.fromTo(
+            hero,
+            1,
+            { height: "0%" },
+            { height: "80%", ease: Power2.easeInOut }
+        )
+            .fromTo(
+                hero,
+                1.2,
+                { width: "100%" },
+                { width: "80%", ease: Power2.easeInOut }
+            )
+            .fromTo(
+                slider,
+                1,
+                { x: "-100%" },
+                { x: "0%", ease: Power2.easeInOut },
+                "-=1"
+            )
+            .fromTo(
+                headline,
+                1,
+                { opacity: "0.4", x: "30%" },
+                { opacity: "1", x: "0%", ease: Power2.easeInOut },
+                "-=1"
+            )
+
+    </script>
      <!-- clock thingy  -->
     <script>
         const hours = document.getElementById('hours');
@@ -645,8 +669,8 @@ function animate() {
 function animate2() {
     requestAnimationFrame(animate2)
     const date = new Date();
-    const hrs = date.getHours() * 30;
-    const mins = date.getMinutes() * 6;
+    const hrs = (date.getHours()-4) * 30;
+    const mins = (date.getMinutes()-30) * 6;
     const secs = date.getSeconds() * 6;
     
     hours2.style.transform = `rotateZ(${hrs+(mins/12)}deg)`;
@@ -657,8 +681,8 @@ function animate2() {
   function animate3() {
     requestAnimationFrame(animate3)
     const date = new Date();
-    const hrs = date.getHours() * 30;
-    const mins = date.getMinutes() * 6;
+    const hrs = (date.getHours()-4) * 30;
+    const mins = (date.getMinutes()-30) * 6;
     const secs = date.getSeconds() * 6;
     
     hours3.style.transform = `rotateZ(${hrs+(mins/12)}deg)`;
@@ -669,8 +693,8 @@ function animate2() {
   function animate4() {
     requestAnimationFrame(animate4)
     const date = new Date();
-    const hrs = date.getHours() * 30;
-    const mins = date.getMinutes() * 6;
+    const hrs = (date.getHours()-4) * 30;
+    const mins = (date.getMinutes()-30) * 6;
     const secs = date.getSeconds() * 6;
     
     hours4.style.transform = `rotateZ(${hrs+(mins/12)}deg)`;
@@ -681,8 +705,8 @@ function animate2() {
   function animate5() {
     requestAnimationFrame(animate5)
     const date = new Date();
-    const hrs = date.getHours() * 30;
-    const mins = date.getMinutes() * 6;
+    const hrs = (date.getHours()-4) * 30;
+    const mins = (date.getMinutes()-30) * 6;
     const secs = date.getSeconds() * 6;
     
     hours5.style.transform = `rotateZ(${hrs+(mins/12)}deg)`;

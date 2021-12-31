@@ -100,6 +100,32 @@ session_start();
     }
   }
 
+  @media (min-height:300px) and (max-height:600px) {
+    .header2 {
+      height: 100vh;
+      width: 100vw;
+    }
+    .header2-info {
+      margin-top: 40px;
+    }
+  }
+
+  .container .img1 img, .container .img2 img {
+  -webkit-transform: rotate(0) scale(1);
+	transform: rotate(0) scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+  }
+  .container .img1 img:hover {
+  -webkit-transform: rotate(15deg) scale(1);
+	transform: rotate(15deg) scale(1);
+  }
+
+  .container .img2 img:hover {
+  -webkit-transform: rotate(-15deg) scale(1);
+	transform: rotate(-15deg) scale(1);
+  }
+
   .divider {
     background: radial-gradient(circle, rgba(136, 189, 188, 1) 0%, rgba(62, 128, 146, 1) 100%);
     height: 3px;
@@ -113,12 +139,12 @@ session_start();
     }
   }
 
-  .container .share i, .container .share2 i {
+  .container .share i {
     color: black;
     font-size: 1.5rem;
   }
 
-  .container .share:hover i, .container .share2:hover i {
+  .container .share:hover i {
     color: rgb(62, 128, 146);
   }
 
@@ -127,7 +153,7 @@ session_start();
   }
 
   @media (max-width:500px) {
-  .container .share i, .container .share2 i {
+  .container .share i {
       font-size: 1rem;
   }
   .container .views {
@@ -217,7 +243,7 @@ session_start();
     <div class="container">
       <div class="row my-5">
 
-        <div class="col-xs-12 col-sm-12 col-lg-6 text-center text-justify p-0">
+        <div class="col-xs-12 col-sm-12 col-lg-6 text-center text-justify p-0 img1">
           <img src="<?=$row['image']?>" class="img-fluid" style="background:#112d32;">
         </div>
 
@@ -242,7 +268,7 @@ session_start();
           </svg>
           </a></div>
           <div class="text-muted views"><i class="fas fa-eye"></i>&nbsp;<?=$row['views']?>&nbsp;&nbsp;&nbsp;</div>
-          <div class="share"><i class="fas fa-share-alt"></i></div>
+          <div class="share" onclick="copylink()"><i class="fas fa-share-alt"></i></div>
           </div>
           <br><br>
 
@@ -254,7 +280,7 @@ session_start();
       <div class="container">
       <div class="row my-5">
 
-        <div class="col-xs-12 col-sm-12 col-lg-6 order-lg-2 text-center text-justify p-0">
+        <div class="col-xs-12 col-sm-12 col-lg-6 order-lg-2 text-center text-justify p-0 img2">
           <img src="<?=$row2['image']?>" class="img-fluid" style="background:#112d32;">
         </div>
 
@@ -279,7 +305,7 @@ session_start();
           </svg>
           </a></div>
           <div class="text-muted views"><i class="fas fa-eye"></i>&nbsp;<?=$row2['views']?>&nbsp;&nbsp;&nbsp;</div>
-          <div class="share2"><i class="fas fa-share-alt"></i></div>
+          <div class="share" onclick="copylink()"><i class="fas fa-share-alt"></i></div>
           </div>
           <br><br>
 
@@ -355,84 +381,25 @@ session_start();
 
     var title;
     var $url1;
-    let share = document.querySelector('.share');
-    share.addEventListener('click', () => {
-          modal1.classList.add('active');
-          title = $(this).closest('.row').find('.title').val();
-          $url1 = $url.substr(0,$url.indexOf("b"));
-          $url1 = $url1 + "blogpage.php?topic=" + title; 
-          $(".body1").text($url1);     
-    });
+    
+    function copylink() {
+      modal1.classList.add('active');
+      title = $(this).closest('.row').find('.title').val();
+      $url1 = $url.substr(0,$url.indexOf("b"));
+      $url1 = $url1 + "blogpage.php?topic=" + title; 
+      $(".body1").text($url1);
+    }
 
 
-    function copyurl1() {
+    function copyurl() {
       copyToClipboard($url1);
     }
-
-
-    var title2;
-    var url2;
-    let share2 = document.querySelector('.share2');
-    share2.addEventListener('click', () => {
-          modal2.classList.add('active');
-          title2 = $(this).closest('.row').find('.title').val();
-          $url2 = $url.substr(0,$url.indexOf("b"));
-          $url2 = $url2 + "blogpage.php?topic=" + title2;
-          $(".body2").text($url2);
-    });
-
-    function copyurl2() {
-      copyToClipboard($url2);
-    }
-
 
 
     function copyToClipboard(value) {
       navigator.clipboard.writeText(value);
       $(".clipboard").text("URL Copied !");
     }
-
-
-  // ******************************************* image animation **************************************************
-  var images = document.querySelectorAll(".container > img");
-
-  function initialiseimage(img) {
-    img.setAttribute("data-visited",false);
-    img.style.width = 0 + "%";
-  }
-
-  for(var img of images) {
-    initialiseimage(img);
-  }
-
-  function fillimage(img) {
-    var currentwidth = 0;
-    var targetwidth = 100;
-    var interval = setInterval(function() {
-      if(currentwidth >= targetwidth) {
-        clearInterval(interval);
-        return;
-      }
-      currentwidth++;
-      img.style.width = currentwidth + "%";
-    },5);
-  }
-
-  function checkScroll() {
-    for(let img of images) {
-      var imgcoordinates = img.getBoundingClientRect();
-      if((img.setAttribute("data-visited")=="false") && (imgcoordinates.top <= (window.innerHeight - imgcoordinates.height))) {
-        img.setAttribute("data-visited",true);
-        fillimage(img);
-      }
-      else if(img.coordinates.top > window.innerHeight) {
-        img.setattribute("data-visited",false);
-        initialiseimage(img);
-      }
-    }
-  }
-
-  window.addEventListener("scroll",checkScroll);
 
   </script>
 

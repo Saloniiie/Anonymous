@@ -42,7 +42,7 @@
         <hr>
         <div class="d-flex">
             <div class="flex-grow-1"></div>
-            <button onclick="copyurl1()" class="btn clipboard" style="background:radial-gradient(circle, rgba(136,189,188,1) 0%, rgba(62,128,146,1) 100%);">Copy URL</button>
+            <button onclick="copyurl()" class="btn clipboard" style="background:radial-gradient(circle, rgba(136,189,188,1) 0%, rgba(62,128,146,1) 100%);">Copy URL</button>
         </div>
         </div>
     </div>

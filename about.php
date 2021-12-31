@@ -131,6 +131,21 @@ session_start();
   opacity: 1;
   }
 
+  @media (min-height:300px) and (max-height:600px) {
+    svg {
+      display: block;
+     width: 100%;
+     height: 100vh;
+    }
+    .container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  }
+  }
+
   /* ************************************************************************************************* */
   .ball {
   display: inline-block;

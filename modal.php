@@ -70,12 +70,14 @@
         let modal1Close = document.querySelector('#modal1-close');
         modal1Close.addEventListener('click', () => {
           modal1.classList.remove('active');
+          $(".clipboard").text("Copy URL");
         });
 
         let modal2 = document.querySelector('.modal2');
         let modal2Close = document.querySelector('#modal2-close');
         modal2Close.addEventListener('click', () => {
           modal2.classList.remove('active');
+          $(".clipboard").text("Copy URL");
         });
 
     </script>

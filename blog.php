@@ -250,7 +250,9 @@ session_start();
         <div class="col-xs-12 col-sm-12 col-lg-6 p-5" style="box-shadow: 2px 2px 2px -1px rgba(0, 0, 0, 0.75);"> <br>
           <div style="font-size: 30px;font-family:Playfair Display SC;color: #252830;font-weight:400;"
             class="text-center title">
-            <?=$row['topic']?>
+            <?php echo $row["topic"];
+            $t=$row["topic"];
+            ?>
           </div>
           <div class="divider"></div>
 
@@ -268,7 +270,7 @@ session_start();
           </svg>
           </a></div>
           <div class="text-muted views"><i class="fas fa-eye"></i>&nbsp;<?=$row['views']?>&nbsp;&nbsp;&nbsp;</div>
-          <div class="share" onclick="copylink()"><i class="fas fa-share-alt"></i></div>
+           <div class="share" onclick="copylink('<?php echo $t; ?>')"><i class="fas fa-share-alt"></i></div> 
           </div>
           <br><br>
 
@@ -287,7 +289,9 @@ session_start();
         <div class="col-xs-12 col-sm-12 col-lg-6 order-lg-1 p-5" style="box-shadow: -2px 2px 2px -1px rgba(0, 0, 0, 0.75);"> <br>
           <div style="font-size: 30px;font-family:Playfair Display SC;color: #252830;font-weight:400;"
             class="text-center title">
-            <?=$row2['topic']?>
+            <?php echo $row2["topic"];
+            $t=$row2["topic"];
+            ?>
           </div>
           <div class="divider"></div>
 
@@ -305,7 +309,7 @@ session_start();
           </svg>
           </a></div>
           <div class="text-muted views"><i class="fas fa-eye"></i>&nbsp;<?=$row2['views']?>&nbsp;&nbsp;&nbsp;</div>
-          <div class="share" onclick="copylink()"><i class="fas fa-share-alt"></i></div>
+          <div class="share" onclick="copylink('<?php echo $t; ?>')"><i class="fas fa-share-alt"></i></div>
           </div>
           <br><br>
 
@@ -379,14 +383,11 @@ session_start();
 
     var $url = $(location).attr('href');
 
-    var title;
     var $url1;
-    
-    function copylink() {
+    function copylink(t) {
       modal1.classList.add('active');
-      title = $(this).closest('.row').find('.title').val();
       $url1 = $url.substr(0,$url.indexOf("b"));
-      $url1 = $url1 + "blogpage.php?topic=" + title; 
+      $url1 = $url1 + "blogpage.php?topic=" + t; 
       $(".body1").text($url1);
     }
 

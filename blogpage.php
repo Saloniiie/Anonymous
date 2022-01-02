@@ -233,6 +233,7 @@ $resultt = mysqli_query($conn,$sqlll);
           <div class="wrapper" style="background: url(<?=$rowww['image']?>) 20% 1%/cover no-repeat;">
             <div class="data">
               <div class="content">
+                <?php $title=$rowww["topic"]; ?>
                 <div class="d-flex">
                   <div class="author flex-grow-1">
                     <?=$rowww['wname']?>
@@ -240,11 +241,10 @@ $resultt = mysqli_query($conn,$sqlll);
                   <div><i class="fas fa-eye"></i>&nbsp;
                     <?=$rowww['views']?> &nbsp;&nbsp;
                   </div>
-                  <!-- <div onclick="copylink()"><i class="fas fa-share-alt"></i></div> -->
+                  <div onclick="copylink('<?php echo $title; ?>')"><i class="fas fa-share-alt"></i></div>
                 </div>
                 <h1 class="title"><a href="blogpage.php?topic=<?=$rowww['topic']?>">
-                    <?=$rowww['topic']?>
-                  </a></h1>
+                <?= $rowww["topic"]; ?></a></h1>
                 <p class="text">
                   <?=$rowww['sdesc']?>
                 </p>
@@ -283,20 +283,17 @@ $resultt = mysqli_query($conn,$sqlll);
       copyToClipboard($url);
     }
 
-    // var title;
-    // var $url1;
+    var $url1;
+    function copylink(title) {
+      modal2.classList.add('active');
+      $url1 = $url.substr(0,$url.indexOf("=")+1);
+      $url1 = $url1 + title; 
+      $(".body2").text($url1);
+    }
 
-    // function copylink() {
-    //   modal2.classList.add('active');
-    //   title = $(this).closest('.content').find('.title').val();
-    //   $url1 = $url.substr(0,$url.indexOf("=")+1);
-    //   $url1 = $url1 + title; 
-    //   $(".body2").text($url1);
-    // }
-
-    // function copyurl2() {
-    //   copyToClipboard($url1);
-    // }
+    function copyurl2() {
+      copyToClipboard($url1);
+    }
 
 
     function copyToClipboard(value) {

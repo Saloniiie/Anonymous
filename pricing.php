@@ -36,72 +36,6 @@ session_start();
 </head>
 
 
-<style>
-
-
-	@media (min-width:1100px) {
-
-		.container .row {
-           margin: 5%;
-       }
-		.aboutprice {
-			margin: 5%;
-			padding-top: 5%;
-		}
-
-		.comparison {
-			margin-left: 5%;
-			margin-right: 5%;
-		}
-
-		.whyus {
-			margin-left: 8%;
-			margin-right: 8%;
-		}
-	}
-
-	.pricing {
-		color: white !important;
-		font-weight: bold !important;
-	}
-
-	.read-more {
-		color: #112d32;
-		cursor: pointer;
-		text-decoration: none;
-	}
-
-	.read-more:hover,
-	.read-more:focus,
-	.read-more:visited {
-		color: black;
-		text-decoration: none;
-	}
-
-	.aboutprice {
-		margin-top: 70vh;
-	}
-
-	@media (min-width:500px) and (max-width:1100px) {
-		.aboutprice {
-			margin-top: 55vh;
-		}
-	}
-
-	@media (max-width:500px) {
-		.aboutprice {
-			margin-top: 40vh;
-		}
-	}
-
-	.comparison .col-lg-4 p {
-		background: radial-gradient(circle, rgba(136, 189, 188, 1) 0%, rgba(62, 128, 146, 1) 100%);
-		color: black;
-		border-radius: 30px;
-	}
-</style>
-
-
 <body>
 
 	<header id="topheader" style="background:black;">
@@ -112,14 +46,255 @@ session_start();
 	<main>
 
 
-		<!-- ************************************************************************************************************************ -->
+		<!-- ********************************************** HERO ************************************************************** -->
 
-		<img src="assets/images/price.jfif" alt="" style="width:100vw;position:absolute;top:0;left:0;background-attachment:fixed;z-index:-1;">
+
+		<style>
+			.hero {
+				width: 100vw;
+				height: 70vh;
+				background-color: #141114;
+				background-image: linear-gradient(335deg, black 23px, transparent 23px),
+					linear-gradient(155deg, black 23px, transparent 23px),
+					linear-gradient(335deg, black 23px, transparent 23px),
+					linear-gradient(155deg, black 23px, transparent 23px);
+				background-size: 58px 58px;
+				background-position: 0px 2px, 4px 35px, 29px 31px, 34px 6px;
+			}
+
+			.sign {
+				position: absolute;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 50%;
+				height: 50%;
+				background-image: radial-gradient(ellipse 50% 35% at 50% 50%,
+						#6b1839,
+						transparent);
+				transform: translate(-50%, -70%);
+				letter-spacing: 2;
+				left: 50%;
+				top: 50%;
+				font-family: "Clip";
+				text-transform: uppercase;
+				font-size: 6em;
+				color: #ffe6ff;
+				text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+					-0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
+					0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+				animation: shine 2s forwards, flicker 3s infinite;
+			}
+
+			@media (max-width:700px) {
+				.sign {
+					font-size: 3rem;
+				}
+			}
+
+			@keyframes blink {
+
+				0%,
+				22%,
+				36%,
+				75% {
+					color: #ffe6ff;
+					text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+						-0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
+						0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+				}
+
+				28%,
+				33% {
+					color: #ff65bd;
+					text-shadow: none;
+				}
+
+				82%,
+				97% {
+					color: #ff2483;
+					text-shadow: none;
+				}
+			}
+
+			.flicker {
+				animation: shine 2s forwards, blink 3s 2s infinite;
+			}
+
+			.fast-flicker {
+				animation: shine 2s forwards, blink 10s 1s infinite;
+			}
+
+			@keyframes shine {
+				0% {
+					color: #6b1839;
+					text-shadow: none;
+				}
+
+				100% {
+					color: #ffe6ff;
+					text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+						-0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
+						0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+				}
+			}
+
+			@keyframes flicker {
+				from {
+					opacity: 1;
+				}
+
+				4% {
+					opacity: 0.9;
+				}
+
+				6% {
+					opacity: 0.85;
+				}
+
+				8% {
+					opacity: 0.95;
+				}
+
+				10% {
+					opacity: 0.9;
+				}
+
+				11% {
+					opacity: 0.922;
+				}
+
+				12% {
+					opacity: 0.9;
+				}
+
+				14% {
+					opacity: 0.95;
+				}
+
+				16% {
+					opacity: 0.98;
+				}
+
+				17% {
+					opacity: 0.9;
+				}
+
+				19% {
+					opacity: 0.93;
+				}
+
+				20% {
+					opacity: 0.99;
+				}
+
+				24% {
+					opacity: 1;
+				}
+
+				26% {
+					opacity: 0.94;
+				}
+
+				28% {
+					opacity: 0.98;
+				}
+
+				37% {
+					opacity: 0.93;
+				}
+
+				38% {
+					opacity: 0.5;
+				}
+
+				39% {
+					opacity: 0.96;
+				}
+
+				42% {
+					opacity: 1;
+				}
+
+				44% {
+					opacity: 0.97;
+				}
+
+				46% {
+					opacity: 0.94;
+				}
+
+				56% {
+					opacity: 0.9;
+				}
+
+				58% {
+					opacity: 0.9;
+				}
+
+				60% {
+					opacity: 0.99;
+				}
+
+				68% {
+					opacity: 1;
+				}
+
+				70% {
+					opacity: 0.9;
+				}
+
+				72% {
+					opacity: 0.95;
+				}
+
+				93% {
+					opacity: 0.93;
+				}
+
+				95% {
+					opacity: 0.95;
+				}
+
+				97% {
+					opacity: 0.93;
+				}
+
+				to {
+					opacity: 1;
+				}
+			}
+		</style>
+
+		<div class="hero">
+			<div class="sign"><span class="fast-flicker">b</span>rea<span class="flicker">t</span>he</div>
+		</div>
+
 
 
 
 
 		<div class="bg-white">
+
+			<!-- ==================================================== ABOUT PRICE =========================================================== -->
+
+			<style>
+				.pricing {
+					color: white !important;
+					font-weight: bold !important;
+				}
+
+				@media (min-width:1100px) {
+
+					.container .row {
+						margin: 5%;
+					}
+
+					.aboutprice {
+						margin: 5%;
+					}
+				}
+			</style>
 			<div class="aboutprice px-5"> <br><br>
 				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio assumenda esse voluptatum tempore
 				tempora sint sit non vel dolorum eos odio ipsam doloremque fuga quod nam libero voluptatibus quaerat
@@ -135,7 +310,22 @@ session_start();
 				repudiandae cupiditate perspiciatis excepturi!
 			</div> <br><br><br>
 
-			<!-- ************************************************************************************************************************ -->
+			<!-- ********************************************** PRICE CARDS ****************************************************** -->
+
+			<style>
+				.read-more {
+					color: #112d32;
+					cursor: pointer;
+					text-decoration: none;
+				}
+
+				.read-more:hover,
+				.read-more:focus,
+				.read-more:visited {
+					color: black;
+					text-decoration: none;
+				}
+			</style>
 
 			<div class="container my-5">
 				<div class="row bg-white" style="box-shadow: 10px 10px 93px 0px rgba(0, 0, 0, 0.75);">
@@ -233,63 +423,7 @@ session_start();
 		<!-- ************************************************************************************************************************ -->
 
 
-		<div style="background:black; color:white;">
-			<br><br><br>
-			<h1 class="text-center">Comparison with Competitors</h1> <br>
-			<div class="text-center">
-				<div
-					style="background:radial-gradient(circle, rgba(136, 189, 188, 1) 0%, rgba(62, 128, 146, 1) 100%);height:3px;width:30vw;margin:auto;">
-				</div>
-			</div> <br>
-			<br><br>
-			<div class="row comparison px-5">
-				<div class="col-lg-4 p-2">
-					<p class="p-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero id harum expedita
-						tenetur cum perspiciatis enim omnis modi blanditiis ab ratione nam velit, doloremque suscipit
-						quibusdam maxime totam illum obcaecati placeat asperiores distinctio deserunt voluptatibus?
-						Atque dolorem voluptate magnam veritatis, culpa repudiandae necessitatibus illo reiciendis quam
-						soluta quasi vel optio.</p>
-				</div>
-				<div class="col-lg-4 p-2">
-					<p class="p-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero id harum expedita
-						tenetur cum perspiciatis enim omnis modi blanditiis ab ratione nam velit, doloremque suscipit
-						quibusdam maxime totam illum obcaecati placeat asperiores distinctio deserunt voluptatibus?
-						Atque dolorem voluptate magnam veritatis, culpa repudiandae necessitatibus illo reiciendis quam
-						soluta quasi vel optio.</p>
-				</div>
-				<div class="col-lg-4 p-2">
-					<p class="p-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero id harum expedita
-						tenetur cum perspiciatis enim omnis modi blanditiis ab ratione nam velit, doloremque suscipit
-						quibusdam maxime totam illum obcaecati placeat asperiores distinctio deserunt voluptatibus?
-						Atque dolorem voluptate magnam veritatis, culpa repudiandae necessitatibus illo reiciendis quam
-						soluta quasi vel optio.</p>
-				</div>
-			</div> <br><br><br><br>
 
-			<!-- ************************************************************************************************************************ -->
-
-			<h2 class="text-center">Why Us?</h2> <br>
-			<div class="text-center">
-				<div
-					style="background:radial-gradient(circle, rgba(136, 189, 188, 1) 0%, rgba(62, 128, 146, 1) 100%);height:3px;width:30vw;margin:auto;">
-				</div>
-			</div> <br><br><br>
-			<div class="whyus">
-				<p class="p-5" style="border:3px solid white;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-					Praesentium, odio tempora rem accusantium eum exercitationem quam blanditiis aliquam, excepturi
-					placeat accusamus a optio itaque quis ab ipsum in ipsam perspiciatis repudiandae magnam esse odit.
-					Quod dicta voluptatibus fugiat soluta labore, voluptas quae praesentium odio molestias, corporis
-					nihil, accusamus architecto modi excepturi omnis eius similique. Tenetur at aspernatur libero
-					officiis adipisci labore eius, expedita neque reprehenderit dolorum ipsa veritatis doloremque velit
-					numquam esse rerum eligendi porro totam ea a, quas dicta similique quae iure! Debitis, sequi
-					suscipit deleniti, voluptates error blanditiis cupiditate voluptas illo iure rem nobis autem at
-					iste, architecto officiis? Illum reiciendis rerum placeat, possimus repellendus, tenetur provident
-					repellat nemo reprehenderit culpa obcaecati corrupti quis odit. Quisquam ex laudantium, vel debitis
-					ratione nisi ea porro atque explicabo voluptates nulla iste odit ipsa consequuntur numquam impedit
-					enim vitae quae molestias aperiam delectus! Optio in neque corporis inventore nisi blanditiis
-					dolore?</p> <br><br><br><br>
-			</div>
-		</div>
 
 		<!-- ************************************************************************************************************************ -->
 

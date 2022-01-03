@@ -52,126 +52,11 @@ $resultt = mysqli_query($conn,$sqlll);
 
   <!-- font awesome cdn link  -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-  
-  
+
+
 
 </head>
 
-
-<style>
-  .row h1 {
-    font-weight: 200;
-  }
-
-  .blog {
-    color: white !important;
-    font-weight: bold !important;
-  }
-
-  .share i {
-    color: black;
-    font-size: 1.5rem;
-  }
-
-  .share:hover i {
-    color: rgb(62, 128, 146);
-  }
-
-  .views {
-    font-size: 1.3rem;
-  }
-
-  .icon {
-    font-size: 4rem;
-  }
-
-  .writtenby {
-    font-size: .8rem;
-  }
-
-  .wname {
-    font-size: 1rem;
-  }
-
-  @media (max-width:500px) {
-    .share i {
-      font-size: 1rem;
-    }
-
-    .views {
-      font-size: 1rem;
-    }
-
-    .icon {
-      font-size: 3rem;
-    }
-
-    .writtenby {
-      font-size: .5rem;
-    }
-
-    .wname {
-      font-size: .8rem;
-    }
-  }
-
-  @media (min-width:700px) {
-    .wbwname {
-      margin-top: 10px;
-    }
-  }
-
-  .card .wrapper {
-    background-color: #fff;
-    min-height: 500px;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.2);
-  }
-
-  .card .wrapper:hover .data {
-    transform: translateY(0);
-    top: 50%;
-    background: white;
-  }
-
-  .card .data {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    transform: translateY(calc(70px + 1em));
-    transition: transform 0.3s;
-  }
-
-  .card .data .content {
-    padding: 1em;
-    position: relative;
-    z-index: 1;
-  }
-
-  .card .author {
-    font-size: 12px;
-  }
-
-  .card .title {
-    margin-top: 10px;
-  }
-
-  .card .text {
-    height: 70px;
-    margin: 0;
-  }
-
-  .card .content {
-    background-color: #fff;
-    box-shadow: 0 5px 30px 10px rgba(0, 0, 0, 0.3);
-  }
-
-  .card .title a {
-    color: #112d32;
-  }
-
-</style>
 
 <body>
 
@@ -189,6 +74,67 @@ $resultt = mysqli_query($conn,$sqlll);
 
 
     <!-- ************************************************************************************************************************** -->
+    <!-- ************************************************************************************************************************** -->
+
+    <style>
+      .blog {
+        color: white !important;
+        font-weight: bold !important;
+      }
+
+      .share i {
+        color: black;
+        font-size: 1.5rem;
+      }
+
+      .share:hover i {
+        color: rgb(62, 128, 146);
+      }
+
+      .views {
+        font-size: 1.3rem;
+      }
+
+      .icon {
+        font-size: 4rem;
+      }
+
+      .writtenby {
+        font-size: .8rem;
+      }
+
+      .wname {
+        font-size: 1rem;
+      }
+
+      @media (max-width:500px) {
+        .share i {
+          font-size: 1rem;
+        }
+
+        .views {
+          font-size: 1rem;
+        }
+
+        .icon {
+          font-size: 3rem;
+        }
+
+        .writtenby {
+          font-size: .5rem;
+        }
+
+        .wname {
+          font-size: .8rem;
+        }
+      }
+
+      @media (min-width:700px) {
+        .wbwname {
+          margin-top: 10px;
+        }
+      }
+    </style>
 
     <div style="background:white;margin-top:60vh;padding:50px; padding-top:100px;" class="px-md-5 mx-md-5">
       <div>
@@ -215,6 +161,75 @@ $resultt = mysqli_query($conn,$sqlll);
     </div>
 
     <!-- ************************************************************************************************************************** -->
+    <!-- ************************************************************************************************************************** -->
+
+    <style>
+      @media (min-width:1100px) {
+        .row {
+          margin: 0 5%;
+        }
+      }
+
+      @media (min-width:700px) and (max-width:1000px) {
+        .row {
+          margin: 0 5%;
+        }
+      }
+
+      .row h1 {
+        font-weight: 200;
+      }
+
+      .card .wrapper {
+        background-color: #fff;
+        min-height: 400px;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.2);
+      }
+
+      .card .wrapper:hover .data {
+        transform: translateY(0);
+        top: 50%;
+        background: white;
+      }
+
+      .card .data {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        transform: translateY(calc(70px + 1em));
+        transition: transform 0.3s;
+      }
+
+      .card .data .content {
+        padding: 1em;
+        position: relative;
+        z-index: 1;
+      }
+
+      .card .author {
+        font-size: 12px;
+      }
+
+      .card .title {
+        margin-top: 10px;
+      }
+
+      .card .text {
+        height: 70px;
+        margin: 0;
+      }
+
+      .card .content {
+        background-color: #fff;
+        box-shadow: 0 5px 30px 10px rgba(0, 0, 0, 0.3);
+      }
+
+      .card .title a {
+        color: #112d32;
+      }
+    </style>
 
     <h1 class="text-center mt-5" style="color:#112d32;font-family:Playfair Display SC;">lorem</h1>
     <div class="row mb-5">
@@ -232,6 +247,7 @@ $resultt = mysqli_query($conn,$sqlll);
         <div class="card card">
           <div class="wrapper" style="background: url(<?=$rowww['image']?>) 20% 1%/cover no-repeat;">
             <div class="data">
+              <div style="background:radial-gradient(circle, rgba(136, 189, 188, 1) 0%, rgba(62, 128, 146, 1) 100%);height:5px;"></div>
               <div class="content">
                 <?php $title=$rowww["topic"]; ?>
                 <div class="d-flex">
@@ -244,9 +260,10 @@ $resultt = mysqli_query($conn,$sqlll);
                   <div onclick="copylink('<?php echo $title; ?>')"><i class="fas fa-share-alt"></i></div>
                 </div>
                 <h1 class="title"><a href="blogpage.php?topic=<?=$rowww['topic']?>">
-                <?= $rowww["topic"]; ?></a></h1>
+                    <?= $rowww["topic"]; ?>
+                  </a></h1>
                 <p class="text">
-                  <?=$rowww['sdesc']?>
+                  <?= $rowww["rdesc"] ?>
                 </p>
               </div>
             </div>
@@ -273,7 +290,7 @@ $resultt = mysqli_query($conn,$sqlll);
 
     let share1 = document.querySelector('.share');
     share1.addEventListener('click', () => {
-          modal1.classList.add('active');
+      modal1.classList.add('active');
     });
 
     var $url = $(location).attr('href');
@@ -286,8 +303,8 @@ $resultt = mysqli_query($conn,$sqlll);
     var $url1;
     function copylink(title) {
       modal2.classList.add('active');
-      $url1 = $url.substr(0,$url.indexOf("=")+1);
-      $url1 = $url1 + title; 
+      $url1 = $url.substr(0, $url.indexOf("=") + 1);
+      $url1 = $url1 + title;
       $(".body2").text($url1);
     }
 
